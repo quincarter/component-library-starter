@@ -1,0 +1,9 @@
+{
+  "name": "@hello-world/bottom-sheet-wc",
+  "version": "0.0.1",
+  "main": "dist/@hello-world/bottom-sheet-wc.cjs.js",
+  "module": "dist/@hello-world/bottom-sheet-wc.esm.js",
+  "dependencies": {
+    "lit": "^2.2.0"
+  }
+}

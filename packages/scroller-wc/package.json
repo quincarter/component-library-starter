@@ -1,0 +1,9 @@
+{
+  "name": "@hello-world/scroller-wc",
+  "version": "0.0.1",
+  "main": "dist/@hello-world/scroller-wc.cjs.js",
+  "module": "dist/@hello-world/scroller-wc.esm.js",
+  "dependencies": {
+    "lit": "^2.2.0"
+  }
+}
