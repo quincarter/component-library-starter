@@ -1,0 +1,9 @@
+{
+  "name": "@quincarter/card-info-wc",
+  "version": "0.0.1",
+  "main": "dist/@quincarter/card-info-wc.cjs.js",
+  "module": "dist/@quincarter/card-info-wc.esm.js",
+  "dependencies": {
+    "lit": "^2.2.0"
+  }
+}

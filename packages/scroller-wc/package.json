@@ -1,8 +1,8 @@
 {
-  "name": "@hello-world/scroller-wc",
+  "name": "@quincarter/scroller-wc",
   "version": "0.0.1",
-  "main": "dist/@hello-world/scroller-wc.cjs.js",
-  "module": "dist/@hello-world/scroller-wc.esm.js",
+  "main": "dist/@quincarter/scroller-wc.cjs.js",
+  "module": "dist/@quincarter/scroller-wc.esm.js",
   "dependencies": {
     "lit": "^2.2.0"
   }

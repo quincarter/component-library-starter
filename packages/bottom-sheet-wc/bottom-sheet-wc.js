@@ -46,44 +46,20 @@ export class BottomSheetComponent extends LitElement {
               </li>
               <li>
                 <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar2@2x.png"
-                  alt="avatar"
+                  src="https://www.w3schools.com/howto/img_avatar.png"
+                  alt="guy-mage"
                 />
               </li>
               <li>
                 <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar3_big.png"
-                  alt="avatar"
+                  src="https://cad.gov.jm/wp-content/uploads/2017/10/img_avatar2.png"
+                  alt="girl-mage"
                 />
               </li>
               <li>
                 <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar4_big@2x.png"
-                  alt="avatar"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar12_big@2x.png"
-                  alt="avatar"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar11_big.png"
-                  alt="avatar"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar10_big@2x.png"
-                  alt="avatar"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.monteirolobato.edu.br/public/assets/admin/images/avatars/avatar9_big@2x.png"
-                  alt="avatar"
+                  src="https://www.ottawamillhouse.com/wp-content/uploads/2017/05/1.png"
+                  alt="guy-mage"
                 />
               </li>
             </ul>

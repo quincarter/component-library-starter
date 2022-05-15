@@ -1,26 +1,30 @@
 {
-  "name": "hello-world",
-  "description": "Webcomponent hello-world following open-wc recommendations",
+  "name": "quincarter",
+  "description": "Webcomponent quincarter following open-wc recommendations",
   "license": "MIT",
-  "author": "hello-world",
+  "author": "quincarter",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
     "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
     "test": "web-test-runner --coverage",
     "test:watch": "web-test-runner --watch",
-    "storybook": "npm run analyze -- --exclude dist && web-dev-server -c .storybook/server.mjs",
+    "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "build": "rimraf dist && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
     "start": "web-dev-server",
-    "lerna:build": "export ROOT_DIR=$(pwd) && lerna exec -- rollup -c $ROOT_DIR/rollup.config.js"
+    "lerna:build": "export ROOT_DIR=$(pwd) && rimraf packages/**/dist && lerna exec -- rollup -c $ROOT_DIR/rollup.config.js",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.2.3",
+    "lit-html": "^2.2.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.16.4",
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/building-rollup": "^2.0.1",
@@ -28,12 +32,19 @@
     "@open-wc/testing": "next",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-cssresources": "^6.2.9",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/web-components": "^6.4.22",
     "@web/dev-server": "^0.1.28",
     "@web/dev-server-storybook": "next",
     "@web/rollup-plugin-html": "^1.10.1",
     "@web/rollup-plugin-import-meta-assets": "^1.0.7",
     "@web/test-runner": "^0.13.22",
+    "babel-loader": "^8.2.5",
     "babel-plugin-template-html-minifier": "^4.1.0",
+    "css-loader": "^6.7.1",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -44,7 +55,8 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-workbox": "^6.2.0"
+    "rollup-plugin-workbox": "^6.2.0",
+    "style-loader": "^3.3.1"
   },
   "eslintConfig": {
     "extends": [

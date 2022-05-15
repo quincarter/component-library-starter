@@ -1,25 +1,19 @@
 import { html } from 'lit';
-import '../packages/scroller-wc/dist/@hello-world/scroller-wc.cjs.js';
+import '../packages/scroller-wc/index.js';
 
 export default {
-  title: 'ScrollerWebComponent',
+  title: 'Components/Actionable',
   component: 'scroller-wc',
   argTypes: {
-    backgroundColor: { control: 'color' },
+    showArrows: { control: 'boolean' },
   },
 };
 
-function Template({ title, backgroundColor }) {
-  return html`
-    <hello-world
-      style="--hello-world-background-color: ${backgroundColor || 'white'}"
-      .title="${title}d"
-    >
-    </hello-world>
-  `;
+function Template({ showArrows }) {
+  return html` <scroller-wc ?show-arrows="${showArrows}"> </scroller-wc> `;
 }
 
-export const App = Template.bind({});
-App.args = {
-  title: 'My app',
+export const HorizontalScroller = Template.bind({});
+HorizontalScroller.args = {
+  showArrows: true,
 };

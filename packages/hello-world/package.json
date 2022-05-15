@@ -1,8 +1,8 @@
 {
-  "name": "@hello-world/hello-world",
+  "name": "@quincarter/hello-world",
   "version": "0.0.1",
-  "main": "dist/@hello-world/hello-world.cjs.js",
-  "module": "dist/@hello-world/hello-world.esm.js",
+  "main": "dist/@quincarter/hello-world.cjs.js",
+  "module": "dist/@quincarter/hello-world.esm.js",
   "dependencies": {
     "lit": "^2.2.0"
   }

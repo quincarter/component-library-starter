@@ -1,0 +1,9 @@
+{
+  "name": "@quincarter/header-wc",
+  "version": "0.0.1",
+  "main": "dist/@quincarter/header-wc.cjs.js",
+  "module": "dist/@quincarter/header-wc.esm.js",
+  "dependencies": {
+    "lit": "^2.2.0"
+  }
+}

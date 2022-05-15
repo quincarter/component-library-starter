@@ -1,3 +1,3 @@
-import { HelloWorld } from './HelloWorld.js';
+import { ScrollerWebComponent } from './scroller-wc.js';
 
-customElements.define('scroller-wc', HelloWorld);
+customElements.define('scroller-wc', ScrollerWebComponent);

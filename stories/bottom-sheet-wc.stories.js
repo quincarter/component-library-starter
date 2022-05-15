@@ -2,7 +2,7 @@ import { html } from 'lit';
 import '../packages/bottom-sheet-wc/index.js';
 
 export default {
-  title: 'BottomSheet',
+  title: 'Components/Actionable',
   component: 'bottom-sheet-wc',
   argTypes: {
     sheetTitle: { control: 'text' },
@@ -18,8 +18,8 @@ function Template({ active, sheetTitle }) {
   `;
 }
 
-export const App = Template.bind({});
-App.args = {
+export const BottomSheet = Template.bind({});
+BottomSheet.args = {
   active: true,
   sheetTitle: 'This is the bottom Sheet title',
 };
