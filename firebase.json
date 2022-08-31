@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "packages/components/dist/@quincarter",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

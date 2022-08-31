@@ -1,0 +1,19 @@
+{
+  "name": "@quincarter/profile-image-wc",
+  "version": "0.0.1",
+  "main": "dist/@quincarter/profile-image-wc.cjs.js",
+  "module": "dist/@quincarter/profile-image-wc.esm.js",
+  "dependencies": {
+    "lit": "^2.2.0"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-babel": "*",
+    "@rollup/plugin-node-resolve": "*",
+    "@web/rollup-plugin-import-meta-assets": "*",
+    "rollup": "*",
+    "rollup-plugin-terser": "*"
+  }
+}
