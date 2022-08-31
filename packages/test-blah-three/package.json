@@ -1,0 +1,19 @@
+{
+  "name": "@quincarter/test-blah-three",
+  "version": "0.0.1",
+  "main": "index.js",
+  "module": "dist/@quincarter/test-blah-three.esm.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "tsc:watch": "tsc --watch"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-babel": "*",
+    "@rollup/plugin-node-resolve": "*",
+    "@web/rollup-plugin-import-meta-assets": "*",
+    "lit": "2.x",
+    "rollup": "*",
+    "rollup-plugin-terser": "*",
+    "typescript": "*"
+  }
+}

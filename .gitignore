@@ -23,6 +23,7 @@ packages/**/node_modules
 /dist/
 **/dist/**
 packages/**/dist
+packages/**/out-tsc
 /out-tsc/
 
 storybook-static

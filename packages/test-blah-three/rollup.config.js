@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 const { LERNA_PACKAGE_NAME } = process.env;
 
 export default {
-  input: `./index.js`,
+  input: `./out-tsc/index.js`,
   output: [
     {
       file: `dist/${LERNA_PACKAGE_NAME}.esm.js`,

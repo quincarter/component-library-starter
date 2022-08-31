@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import './index.js';
+import './out-tsc/index.js';
 
 export default {
   title: 'Components/Actionable',

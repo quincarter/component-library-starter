@@ -1,12 +1,10 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, HTMLTemplateResult } from 'lit';
+import { property } from 'lit/decorators'
 import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
 
 export class <%=className%>Component extends LitElement {
-  static get properties() {
-    return {
-      <%=propertyName%>Title: { type: String, attribute: '<%=fileName%>-title' },
-    };
-  }
+  @property({type: String, attribute: '<%=fileName%>-title'})
+  <%=propertyName%>Title: string;
 
   static get styles() {
     return [<%=className%>ComponentStyles];
@@ -17,7 +15,7 @@ export class <%=className%>Component extends LitElement {
     this.<%=propertyName%>Title = "<%=fileName%> works!";
   }
 
-  render() {
+  render(): HTMLTemplateResult {
     return html`
       <div class="<%=fileName%>-test-color">
         ${this.<%=propertyName%>Title}
