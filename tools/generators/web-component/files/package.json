@@ -1,8 +1,8 @@
 {
-  "name": "@quincarter/blobs-wc",
+  "name": "@quincarter/<%=fileName%>",
   "version": "0.0.1",
   "main": "index.js",
-  "module": "dist/@quincarter/blobs-wc.esm.js",
+  "module": "dist/@quincarter/<%=fileName%>.esm.js",
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
