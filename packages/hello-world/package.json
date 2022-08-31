@@ -1,9 +1,0 @@
-{
-  "name": "@quincarter/hello-world",
-  "version": "0.0.1",
-  "main": "dist/@quincarter/hello-world.cjs.js",
-  "module": "dist/@quincarter/hello-world.esm.js",
-  "dependencies": {
-    "lit": "^2.2.0"
-  }
-}

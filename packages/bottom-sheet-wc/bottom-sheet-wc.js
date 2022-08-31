@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { LitElement, html } from 'lit';
 import { BottomSheetComponentStyles } from './bottom-sheet-wc.styles.js';
 
@@ -6,6 +7,8 @@ export class BottomSheetComponent extends LitElement {
     return {
       title: { type: String, attribute: 'title' },
       active: { type: Boolean, attribute: 'active' },
+      buttons: { type: Array, attribute: 'buttons' },
+      infoText: { type: String, attribute: 'info-text' },
     };
   }
 
@@ -17,6 +20,18 @@ export class BottomSheetComponent extends LitElement {
     super();
     this.title = 'This is the bottom Sheet title';
     this.active = false;
+    this.buttons = [];
+    this.infoText = null;
+  }
+
+  buttonPressed(event) {
+    console.log('cancel event method', event);
+    const cancelEvent = new CustomEvent('cancel', {
+      bubbles: true,
+      composed: true,
+    });
+
+    this.dispatchEvent(cancelEvent);
   }
 
   render() {
@@ -25,53 +40,26 @@ export class BottomSheetComponent extends LitElement {
         <div class="bottom-sheet">
           <div class="title">${this.title}</div>
           <div class="sheet-body">
-            <ul>
-              <li>
-                <img
-                  src="https://www.w3schools.com/howto/img_avatar.png"
-                  alt="guy-mage"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cad.gov.jm/wp-content/uploads/2017/10/img_avatar2.png"
-                  alt="girl-mage"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.ottawamillhouse.com/wp-content/uploads/2017/05/1.png"
-                  alt="guy-mage"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.w3schools.com/howto/img_avatar.png"
-                  alt="guy-mage"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cad.gov.jm/wp-content/uploads/2017/10/img_avatar2.png"
-                  alt="girl-mage"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://www.ottawamillhouse.com/wp-content/uploads/2017/05/1.png"
-                  alt="guy-mage"
-                />
-              </li>
-            </ul>
-            <p class="info-text">
-              This is some other informative text in the bottom sheet. Lorem
-              ipsum dolor sit
-            </p>
+            <slot name="top-slot"></slot>
+            ${this.infoText
+              ? html`<p class="info-text">${this.infoText}</p>`
+              : ''}
+            <slot name="bottom-slot"></slot>
           </div>
           <div class="sheet-footer">
-            <button type="button">Share</button>
-            <button type="button">Edit</button>
-            <button type="button">Cancel</button>
+            ${!this.buttons?.length
+              ? ''
+              : this.buttons.map(
+                  button =>
+                    html`
+                      <button
+                        type="${!button?.type ? 'button' : button.type}"
+                        @click="${() => this.buttonPressed(button.name)}"
+                      >
+                        ${button.name}
+                      </button>
+                    `
+                )}
           </div>
         </div>
       </div>

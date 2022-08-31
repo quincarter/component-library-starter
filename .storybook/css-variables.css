@@ -1,4 +1,11 @@
 :root {
   --box-shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --clip-path--ellipse: ellipse(40% 49% at 50% 50%);
+  --clip-path--pill: inset(0% 10% 0% 10% round 100%);
+  --component-background--grey: #eaf0eb;
   --header-height: 3rem;
+}
+
+* {
+  font-family: Marker Felt, fantasy;
 }

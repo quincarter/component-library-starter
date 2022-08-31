@@ -13,9 +13,10 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "build": "rimraf dist && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
+    "rimraf-dist": "rimraf packages/**/dist",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
-    "start": "web-dev-server",
+    "start": "yarn run storybook",
     "lerna:build": "export ROOT_DIR=$(pwd) && rimraf packages/**/dist && lerna exec -- rollup -c $ROOT_DIR/rollup.config.js",
     "build-storybook": "build-storybook"
   },
@@ -56,7 +57,9 @@
     "rollup": "^2.60.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-workbox": "^6.2.0",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "nx": "14.6.0-rc.2",
+    "@nrwl/nx-cloud": "latest"
   },
   "eslintConfig": {
     "extends": [

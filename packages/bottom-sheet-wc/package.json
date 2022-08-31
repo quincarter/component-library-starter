@@ -3,7 +3,17 @@
   "version": "0.0.1",
   "main": "dist/@quincarter/bottom-sheet-wc.cjs.js",
   "module": "dist/@quincarter/bottom-sheet-wc.esm.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
   "dependencies": {
     "lit": "^2.2.0"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-babel": "*",
+    "@rollup/plugin-node-resolve": "*",
+    "@web/rollup-plugin-import-meta-assets": "*",
+    "rollup": "*",
+    "rollup-plugin-terser": "*"
   }
 }
