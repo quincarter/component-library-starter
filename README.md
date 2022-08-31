@@ -10,7 +10,8 @@ Run this to start and install dependencies:
 yarn
 ```
 
-### Generate a new Component by running this command:
+## Generating Components
+#### New Component:
 
 ```bash
 yarn run new-component
@@ -20,6 +21,7 @@ yarn run new-component
 yarn run new-component my-component-name
 ```
 
+## Storybook/Development
 ### Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
 
 View your components in storybook here:
