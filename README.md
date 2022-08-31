@@ -31,7 +31,7 @@ yarn start
 - This is simplified by running:
 
 ```bash
-yarn nx run-many --target=build
+yarn run build
 ```
 
 ## Scripts
