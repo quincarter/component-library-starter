@@ -13,7 +13,11 @@ yarn
 ### Generate a new Component by running this command:
 
 ```bash
-npx nx workspace-generator web-component
+yarn run new-component
+```
+#### OR this will also work
+```bash
+yarn run new-component my-component-name #where this is the component name
 ```
 
 ### Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
