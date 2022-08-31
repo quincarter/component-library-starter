@@ -10,12 +10,13 @@ Run this to start and install dependencies:
 yarn
 ```
 
-- Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
-- Generate a new Component by running this command:
+### Generate a new Component by running this command:
 
 ```bash
 npx nx workspace-generator web-component
 ```
+
+### Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
 
 View your components in storybook here:
 
