@@ -4,7 +4,7 @@
   "main": "index.js",
   "module": "dist/@quincarter/<%=fileName%>.esm.js",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "tsc && rollup -c rollup.config.js",
     "tsc:watch": "tsc --watch"
   },
   "peerDependencies": {

@@ -15,7 +15,7 @@
     "build": "nx run-many --target=build",
     "tsc:watch": "nx run-many --target=tsc:watch",
     "new-component:js": "nx workspace-generator web-component --",
-    "new-component:ts": "nx workspace-generator web-component-ts --",
+    "new-component:ts": "nx workspace-generator web-component-ts && yarn run build",
     "rimraf-dist": "rimraf packages/**/dist",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
