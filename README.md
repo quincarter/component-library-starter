@@ -11,14 +11,23 @@ yarn
 ```
 
 ## Generating Components
-#### New Component:
+#### New JS Component:
 
 ```bash
-yarn run new-component
+yarn run new-component:js
 ```
 #### OR this will also work
 ```bash
-yarn run new-component my-component-name
+yarn run new-component:js my-component-name
+```
+
+#### New TypeScript Component
+```bash
+yarn run new-component:ts
+```
+#### OR this will also work
+```bash
+yarn run new-component:ts my-component-name
 ```
 
 ## Storybook/Development
