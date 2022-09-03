@@ -1,1 +1,33 @@
 tools/**
+
+## editors
+/.idea
+/.vscode
+/.history
+
+## system files
+.DS_Store
+
+## npm
+/node_modules/
+**/node_modules/**
+packages/**/node_modules
+/npm-debug.log
+
+## testing
+/coverage/
+
+## temp folders
+/.tmp/
+
+# build
+/_site/
+/dist/
+**/dist/**
+packages/**/dist
+packages/**/out-tsc
+packages/**/coverage
+/out-tsc/
+
+storybook-static
+custom-elements.json

@@ -1,5 +1,5 @@
 import { LitElement, html, HTMLTemplateResult } from 'lit';
-import { property } from 'lit/decorators';
+import { property } from 'lit/decorators.js';
 import { TestTsComponentComponentStyles } from './test-ts-component.styles.js';
 
 export class TestTsComponentComponent extends LitElement {

@@ -1,5 +1,5 @@
 import { LitElement, html, HTMLTemplateResult } from 'lit';
-import { property } from 'lit/decorators'
+import { property } from 'lit/decorators.js'
 import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
 
 export class <%=className%>Component extends LitElement {

@@ -5,9 +5,12 @@
   "module": "dist/@quincarter/test-ts-component.esm.js",
   "scripts": {
     "build": "tsc && rollup -c rollup.config.js",
+    "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch"
   },
   "peerDependencies": {
+    "@open-wc/testing": "*",
+    "@web/test-runner": "*",
     "@rollup/plugin-babel": "*",
     "@rollup/plugin-node-resolve": "*",
     "@web/rollup-plugin-import-meta-assets": "*",

@@ -6,10 +6,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "test": "web-test-runner --coverage",
-    "test:watch": "web-test-runner --watch",
+    "lint": "eslint --ext .js,.html --ignore-path .prettierignore && prettier \"**/*.js\" --check --ignore-path .prettierignore",
+    "format": "eslint --ext .js,.html --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore && prettier \"**/*.ts\" --write --ignore-path .prettierignore",
+    "test": "nx run-many --target=test",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "build": "nx run-many --target=build",
@@ -18,10 +17,8 @@
     "new-component:ts": "nx workspace-generator web-component-ts $1",
     "rimraf-dist": "rimraf packages/**/dist",
     "rimraf": "rimraf --",
-    "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
     "start": "npm-run-all --parallel tsc:watch storybook",
-    "lerna:build": "export ROOT_DIR=$(pwd) && rimraf packages/**/dist && lerna exec -- rollup -c $ROOT_DIR/rollup.config.js",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
