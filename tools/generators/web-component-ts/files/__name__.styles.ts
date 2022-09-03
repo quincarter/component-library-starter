@@ -10,7 +10,7 @@ export const <%=className%>ComponentStyles: CSSResult = css`
   .card {
     box-shadow: var(--test-box-shadow);
     padding: var(--default-card-padding);
-    width: 300px;
+    width: 500px;
   }
 
   .card-body {
@@ -18,7 +18,7 @@ export const <%=className%>ComponentStyles: CSSResult = css`
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .<%=fileName%>-test-color {
     color: rebeccapurple;
   }

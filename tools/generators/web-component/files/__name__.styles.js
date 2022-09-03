@@ -10,7 +10,7 @@ export const <%=className%>ComponentStyles = css`
   .card {
     box-shadow: var(--test-box-shadow);
     padding: var(--default-card-padding);
-    width: 300px;
+    width: 500px;
   }
 
   .card-body {
