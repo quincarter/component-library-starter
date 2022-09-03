@@ -2,7 +2,7 @@ import { html } from 'lit';
 import './out-tsc/index.js';
 
 export default {
-  title: 'New/Components',
+  title: 'New/TS Components',
   component: '<%=fileName%>',
   argTypes: {
     <%=propertyName%>Title: { control: 'text' },
