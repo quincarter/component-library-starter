@@ -1,0 +1,17 @@
+{
+  "name": "@quincarter/test-js-component",
+  "version": "0.0.1",
+  "main": "index.js",
+  "module": "dist/@quincarter/test-js-component.esm.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-babel": "*",
+    "@rollup/plugin-node-resolve": "*",
+    "@web/rollup-plugin-import-meta-assets": "*",
+    "lit": "2.x",
+    "rollup": "*",
+    "rollup-plugin-terser": "*"
+  }
+}
