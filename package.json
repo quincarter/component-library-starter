@@ -111,6 +111,10 @@
           {
             "projects": "dependencies",
             "target": "build"
+          },
+          {
+            "projects": "dependencies",
+            "target": "test"
           }
         ]
       },

@@ -2,9 +2,17 @@
 
 const filteredLogs = ['Running in dev mode', 'lit-html is in dev mode'];
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
+
 export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   /** Test files to run */
   files: './out-tsc/*.spec.js',
+  port: getRandomInt(8000, 9000),
 
   /** Resolve bare module imports */
   nodeResolve: {
