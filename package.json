@@ -17,6 +17,7 @@
     "new-component:js": "nx workspace-generator web-component --",
     "new-component:ts": "nx workspace-generator web-component-ts && yarn run build",
     "rimraf-dist": "rimraf packages/**/dist",
+    "rimraf": "rimraf --",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
     "start": "npm-run-all --parallel tsc:watch storybook",

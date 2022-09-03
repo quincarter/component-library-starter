@@ -8,7 +8,8 @@
       "type": "string",
       "description": "Component Name",
       "x-prompt": "Component Name",
-            "$default": {
+      "pattern": "^[a-zA-Z]+-",
+      "$default": {
         "$source": "argv",
         "index": 0
       }

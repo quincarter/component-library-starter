@@ -6,9 +6,10 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "Component Name",
-      "x-prompt": "Component Name",
-            "$default": {
+      "description": "Component Name (my-component)",
+      "x-prompt": "Component Name (my-component)",
+      "pattern": "^[a-zA-Z]+-",
+      "$default": {
         "$source": "argv",
         "index": 0
       }
