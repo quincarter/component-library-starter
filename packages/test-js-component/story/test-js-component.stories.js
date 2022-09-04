@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import './index.js';
+import '../index.js';
 
 export default {
   title: 'New/JS Components',

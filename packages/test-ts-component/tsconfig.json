@@ -5,6 +5,6 @@
     "rootDir": ".",
     "types": ["node", "jest", "mocha"]
   },
-  "include": ["*.ts"],
+  "include": ["*.ts", "src/*.ts"],
   "exclude": ["*.stories.*"]
 }

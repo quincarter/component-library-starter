@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import './out-tsc/index.js';
+import '../out-tsc/index.js';
 
 export default {
   title: 'New/TS Components',

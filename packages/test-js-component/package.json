@@ -2,10 +2,11 @@
   "name": "@quincarter/test-js-component",
   "version": "0.0.1",
   "main": "index.js",
+  "type": "module",
   "module": "dist/@quincarter/test-js-component.esm.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "test": "web-test-runner --coverage"
+    "test": "wtr --coverage"
   },
   "peerDependencies": {
     "@open-wc/testing": "*",

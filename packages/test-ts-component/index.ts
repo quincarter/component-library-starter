@@ -1,3 +1,3 @@
-import { TestTsComponentComponent } from './test-ts-component.js';
+import { TestTsComponentComponent } from './src/test-ts-component.js';
 
 customElements.define('test-ts-component', TestTsComponentComponent);

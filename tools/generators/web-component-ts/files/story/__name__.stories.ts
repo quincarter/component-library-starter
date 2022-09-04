@@ -1,8 +1,8 @@
 import { html } from 'lit';
-import './index.js';
+import '../out-tsc/index.js';
 
 export default {
-  title: 'New/JS Components',
+  title: 'New/TS Components',
   component: '<%=fileName%>',
   argTypes: {
     <%=propertyName%>Title: { control: 'text' },

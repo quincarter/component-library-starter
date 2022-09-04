@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
 import { TestTsComponentComponent } from './test-ts-component.js';
-import './index.js';
+import '../index.js';
 
 describe('TestTsComponent', () => {
   let element: TestTsComponentComponent;

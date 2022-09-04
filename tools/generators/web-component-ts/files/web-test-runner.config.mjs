@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 
 export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   /** Test files to run */
-  files: './out-tsc/*.spec.js',
+  files: './out-tsc/src/*.spec.js',
   port: getRandomInt(8000, 9000),
 
   /** Resolve bare module imports */
