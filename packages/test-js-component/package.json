@@ -8,6 +8,7 @@
     "build": "rollup -c rollup.config.js",
     "test": "wtr --coverage",
     "lint": "eslint --ext .js,.html --ignore-path .eslintignore && prettier \"**/*.js\" --check --ignore-path .eslintignore",
+    "lint:fix": "eslint --ext .js,.html --ignore-path .eslintignore && prettier \"**/*.js\" --fix --ignore-path .eslintignore",
     "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.js\" --write --ignore-path .eslintignore"
   },
   "peerDependencies": {

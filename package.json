@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "lint": "nx run-many --target=lint",
+    "lint:fix": "nx run-many --target=lint:fix",
     "format": "nx run-many --target=format",
     "test": "nx run-many --target=test",
     "storybook": "start-storybook -p 6006",
@@ -92,6 +93,10 @@
   },
   "lint-staged": {
     "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
       "eslint --fix",
       "prettier --write"
     ]
