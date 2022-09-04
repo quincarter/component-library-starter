@@ -76,8 +76,23 @@ You can also just run `yarn run` and it will ask you which script you would like
 - `lint` runs the linter for each `package` with the --check flag utilizing `Nx`
 - `lint:fix` runs the linter for each `package` with the --fix flag utilizing `Nx`
 - `format` fixes linting and formatting errors with `prettier` for each `project` utilizing `Nx`
-## Tooling configs
+# Tooling and Extensions
 
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
+Tooling for this project should be fairly straightforward. Most users can get going quickly. If you are using VS Code, you can install a few of these Extensions and it may make your life easier working with [Nx](https://nx.dev) and [Lit Element](https://lit.dev).
+
+## VS Code Extensions
+
+### Recommended Extensions
+* Lit Element Extensions. I have all of these and they make my life much easier developing components in VS Code.
+  * [Lit Snippets](https://marketplace.visualstudio.com/items?itemName=lit.lit-snippets) - Great for quickly scaffolding a component boilerplate
+  * [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) - This is one that provides some syntax highlighting and intellisense for html inside of lit element. Very useful so it doesn't just look like a long template string. 
+  * [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) - This one provides more syntax highlighting outside of the html syntax.
+* Formatting and Code normalization - Most of these are installed by default but ensure you have them
+  * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatting
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Linting visualization in the editor
+### Optional
+* [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) - Great for executing workspace commands. This project is setup to simplify these commands with built in `package.json` scripts. If you want this, use it at your own risk. 
+* [Ayu Mirage Color Scheme](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) - An easy on the eyes color scheme for VS Code that makes code much more pleasant to look at.
+* [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - Colorful icons that give your VS Code some character
 
 If you customize the configuration a lot, you can consider moving them to individual files.
