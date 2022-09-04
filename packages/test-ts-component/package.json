@@ -1,6 +1,7 @@
 {
   "name": "@quincarter/test-ts-component",
   "version": "0.0.1",
+  "license": "MIT",
   "main": "index.js",
   "module": "dist/@quincarter/test-ts-component.esm.js",
   "scripts": {

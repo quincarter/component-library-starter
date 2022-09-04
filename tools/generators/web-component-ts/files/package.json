@@ -1,6 +1,7 @@
 {
   "name": "@quincarter/<%=fileName%>",
   "version": "0.0.1",
+  "license": "MIT",
   "main": "index.js",
   "module": "dist/@quincarter/<%=fileName%>.esm.js",
   "scripts": {
