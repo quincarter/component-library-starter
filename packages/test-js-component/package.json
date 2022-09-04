@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "index.js",
-  "module": "dist/@quincarter/test-js-component.esm.js",
+  "module": "dist/@quincarter/test-js-component.js",
+  "files": [
+    "dist"
+  ],
+  "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test": "wtr --coverage",

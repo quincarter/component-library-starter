@@ -3,7 +3,7 @@
   "description": "Webcomponent quincarter following open-wc recommendations",
   "license": "MIT",
   "author": "quincarter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "lint": "nx run-many --target=lint",
@@ -12,7 +12,7 @@
     "test": "nx run-many --target=test",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
-    "build": "nx run-many --target=build",
+    "build": "npm-run-all --sequential rimraf-dist && nx run-many --target=build",
     "tsc:watch": "nx run-many --target=tsc:watch",
     "new-component:js": "nx workspace-generator web-component $1",
     "new-component:ts": "nx workspace-generator web-component-ts $1",
@@ -97,6 +97,10 @@
       "prettier --write"
     ],
     "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
       "eslint --fix",
       "prettier --write"
     ]

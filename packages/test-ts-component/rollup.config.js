@@ -3,13 +3,13 @@ import babel from '@rollup/plugin-babel';
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import { terser } from 'rollup-plugin-terser';
 
-const { LERNA_PACKAGE_NAME } = process.env;
+const { PACKAGE_NAME } = process.env;
 
 export default {
   input: `./out-tsc/index.js`,
   output: [
     {
-      file: `dist/${LERNA_PACKAGE_NAME}.esm.js`,
+      file: `dist/${PACKAGE_NAME}.js`,
       format: 'esm',
     },
   ],

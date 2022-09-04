@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "index.js",
-  "module": "dist/@quincarter/test-ts-component.esm.js",
+  "module": "dist/@quincarter/test-ts-component.js",
+  "files": [
+    "dist"
+  ],
+  "private": false,
   "scripts": {
     "build": "tsc && rollup -c rollup.config.js",
     "test": "tsc && web-test-runner --coverage",
