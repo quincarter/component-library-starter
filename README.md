@@ -50,12 +50,11 @@ yarn run build
 ```
 
 ## Scripts
-
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
+- `yarn` will link all of packages together
+- `start` runs your app for development, reloading on file changes and using Storybook
+- `build` builds your app and outputs it in your `dist` directory on each `package` utilizing `Nx`
+- `test` runs the test command on each `package` utilizing `Nx`
+- `lint` runs the linter for each project
 - `format` fixes linting and formatting errors
 - `storybook` runs storybook dev server
 - `storybook:build` builds storybook for static site hosting i.e. github pages
