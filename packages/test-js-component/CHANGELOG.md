@@ -1,5 +1,11 @@
 # @quincarter/test-js-component
 
+## 1.0.1
+
+### Patch Changes
+
+- Bumping patch test from changesets
+
 ## 1.0.0
 
 ### Major Changes
