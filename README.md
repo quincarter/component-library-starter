@@ -7,9 +7,11 @@
 Run this to start and install dependencies:
 
 ```bash
-yarn
+yarn install
 ```
 
+#### This library uses Changesets
+* For commands and other info, see: [Changesets README.md](./.changeset/README.md)
 ## Generating Components
 #### New JS Component:
 
