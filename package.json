@@ -10,10 +10,11 @@
     "lint:fix": "nx run-many --target=lint:fix",
     "format": "nx run-many --target=format",
     "test": "nx run-many --target=test",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "build": "npm-run-all --sequential rimraf-dist && nx run-many --target=build",
     "tsc:watch": "nx run-many --target=tsc:watch",
+    "changeset:add": "changeset && changeset version",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "new-component:js": "nx workspace-generator web-component $1",
     "new-component:ts": "nx workspace-generator web-component-ts $1",
     "rimraf-dist": "rimraf packages/**/dist",
@@ -23,6 +24,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@changesets/cli": "^2.24.4",
+    "@quincarter/test-js-component": "^0.0.2",
     "lit": "^2.3.1",
     "tslib": "^2.3.0"
   },
@@ -107,9 +110,11 @@
     ]
   },
   "customElements": "custom-elements.json",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "nx": {
     "targets": {
       "build": {
