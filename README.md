@@ -10,7 +10,7 @@ Run this to start and install dependencies:
 yarn install
 ```
 
-#### This library uses Changesets
+#### This library uses Changesets for publishing to npm and Changelogs in each package
 * For commands and other info, see: [Changesets README.md](./.changeset/README.md)
 ## Generating Components
 #### New JS Component:
