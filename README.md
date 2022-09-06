@@ -52,7 +52,7 @@ yarn run build
 ```
 
 ### Package Linking
-- Simply running `yarn` will link all of packages together utilizing the yarn workspace
+- Simply running `yarn link` will link all of packages together utilizing the yarn workspace symlinking strategy
 
 # Scripts
 
