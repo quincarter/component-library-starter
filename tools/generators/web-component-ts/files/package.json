@@ -2,12 +2,17 @@
   "name": "@quincarter/<%=fileName%>",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/@quincarter/<%=fileName%>.js",
   "module": "dist/@quincarter/<%=fileName%>.js",
-  "files": ["dist"],
+  "files": ["dist", "README.md", "out-tsc/src"],
   "private": false,
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
   "scripts": {
     "build": "tsc && rollup -c rollup.config.js",
+    "postbuild": "yarn run docs:md",
+    "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch",
     "lint": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --check --ignore-path .eslintignore",

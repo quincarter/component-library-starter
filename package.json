@@ -10,6 +10,7 @@
     "lint:fix": "nx run-many --target=lint:fix",
     "format": "nx run-many --target=format",
     "test": "nx run-many --target=test",
+    "docs:md": "nx run-many --target=docs:md",
     "build": "npm-run-all --sequential rimraf-dist && nx run-many --target=build",
     "tsc:watch": "nx run-many --target=tsc:watch",
     "changeset:add": "changeset && changeset version",
@@ -25,7 +26,6 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.24.4",
-    "@quincarter/test-js-component": "^0.0.2",
     "lit": "^2.3.1",
     "tslib": "^2.3.0"
   },
@@ -78,7 +78,8 @@
     "rollup-plugin-workbox": "^6.2.0",
     "style-loader": "^3.3.1",
     "ts-jest": "27.1.4",
-    "ts-node": "10.9.1"
+    "ts-node": "10.9.1",
+    "web-component-analyzer": "^2.0.0-next.4"
   },
   "eslintConfig": {
     "extends": [

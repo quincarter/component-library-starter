@@ -2,6 +2,8 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc",
+    "declaration": true,
+    "declarationMap": true,
     "rootDir": ".",
     "types": ["node", "jest", "mocha"]
   },
