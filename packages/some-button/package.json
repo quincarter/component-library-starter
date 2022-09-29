@@ -1,6 +1,6 @@
 {
   "name": "@quincarter/some-button",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/@quincarter/some-button.js",
   "module": "dist/@quincarter/some-button.js",

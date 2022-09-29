@@ -19,6 +19,9 @@ import '@quincarter/some-button';
 * If you need to rename the element for some reason, you can do this:
 ```javascript
 import { SomeButton } from '@quincarter/some-button/SomeButton';
+
+// then define the component yourself with a custom tag name
+customElements.define('foo-my-tag-here-bar', SomeButton);
 ```
 
 ## Usage

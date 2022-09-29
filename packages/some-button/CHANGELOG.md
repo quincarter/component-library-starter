@@ -1,7 +1,7 @@
 # @quincarter/some-button
 
-## 0.1.0
+## 1.0.0
 
-### Minor Changes
+### Major Changes
 
-- adding new buttons and something else
+- Updating to v1

@@ -2,6 +2,7 @@ import { LitElement, html, HTMLTemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
 import { SomeButtonComponentStyles } from './some-button.styles.js';
 import { ISomeButton } from '../core/SomeButton.interface';
+
 /**
  * This is a short description of your component. Change me.
  *
@@ -22,6 +23,9 @@ import { ISomeButton } from '../core/SomeButton.interface';
  * * If you need to rename the element for some reason, you can do this:
  * ```javascript
  * import { SomeButton } from '@quincarter/some-button/SomeButton';
+ *
+ * // then define the component yourself with a custom tag name
+ * customElements.define('foo-my-tag-here-bar', SomeButton);
  * ```
  *
  * ## Usage
