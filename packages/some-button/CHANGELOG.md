@@ -1,5 +1,11 @@
 # @quincarter/some-button
 
+## 1.1.3
+
+### Patch Changes
+
+- updated repository field
+
 ## 1.1.2
 
 ### Patch Changes

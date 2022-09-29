@@ -2,8 +2,10 @@
   "name": "@quincarter/<%=fileName%>",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/@quincarter/<%=fileName%>.js",
-  "module": "dist/@quincarter/<%=fileName%>.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+  },
   "exports": {
     ".": "./out-tsc/index.js",
     "./<%=className%>": {
