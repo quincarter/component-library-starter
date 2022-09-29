@@ -1,7 +1,7 @@
 # @quincarter/some-button
 
-## 1.0.0
+## 1.1.0
 
-### Major Changes
+### Minor Changes
 
-- Updating to v1
+- minor bump to update readme
