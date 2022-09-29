@@ -4,7 +4,7 @@ import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
 import { I<%=className%> } from '../core/<%=className%>.interface';
 
 /**
- * This is a short description of your component. Change me in [./src/<%=fileName%>.ts](./src/<%=fileName%>.ts#L9-39) in the JSDoc above the Component Class.
+ * This is a short description of your component. Change me in [./src/<%=fileName%>.ts](./src/<%=fileName%>.ts#L6-42) in the JSDoc above the Component Class.
  *
  * * Updating these docs in the ts file will generate a new README.md file at the package root in the pre-commit hook.
  * * Properties and other items added in JSDoc will be appended below the final line of this JSDoc based on your component Composition.
