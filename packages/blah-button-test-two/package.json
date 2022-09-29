@@ -1,20 +1,37 @@
 {
-  "name": "@quincarter/test-ts-component",
-  "version": "1.3.2",
+  "name": "@quincarter/blah-button-test-two",
+  "version": "1.5.0",
   "license": "MIT",
-  "main": "dist/@quincarter/test-ts-component.js",
-  "module": "dist/@quincarter/test-ts-component.js",
+  "exports": {
+    ".": "./out-tsc/index.js",
+    "./Blah": {
+      "import": "./out-tsc/src/blah-button-test-two.js",
+      "require": "./out-tsc/src/blah-button-test-two.js",
+      "types": "./out-tsc/src/blah-button-test-two.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./out-tsc/index.d.ts"
+      ],
+      "Blah": [
+        "./out-tsc/src/blah-button-test-two.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "out-tsc"
   ],
+  "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
-  "private": false,
   "scripts": {
     "build": "tsc",
-    "postinstall": "yarn run docs:md",
+    "postbuild": "yarn run docs:md",
     "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch",

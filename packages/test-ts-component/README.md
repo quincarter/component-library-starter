@@ -1,23 +1,24 @@
-# TestTsComponent Web Component
+# test-ts-component
 
-## Install
-
-```bash
-npm i -s @quincarter-components/test-ts-component
-```
-
-or with `yarn`
-
-```bash
-yarn add @quincarter-components/test-ts-component
-```
+This is just at testing Typescript hello world component. for starter use only
 
 ## Usage
-
 ```html
-<test-ts-component></test-ts-component>
+<test-ts-component
+test-field="blah"
+another-field="testing"
+a-third-field="number3">
+</test-ts-component>
 ```
 
-### Development
+## Properties
 
-- Update package.json with scripts needed for testing or additional functions
+| Property               | Attribute                 | Type     | Default                    |
+|------------------------|---------------------------|----------|----------------------------|
+| `testTsComponentTitle` | `test-ts-component-title` | `string` | "test-ts-component works!" |
+
+## Slots
+
+| Name       | Description                            |
+|------------|----------------------------------------|
+| `starting` | slot a slotted element thing goes here |

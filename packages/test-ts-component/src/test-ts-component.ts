@@ -2,6 +2,22 @@ import { LitElement, html, HTMLTemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
 import { TestTsComponentComponentStyles } from './test-ts-component.styles.js';
 
+/**
+ * This is just at testing Typescript hello world component. for starter use only
+ *
+ * ## Usage
+ * ```html
+ * <test-ts-component
+ * test-field="blah"
+ * another-field="testing"
+ * a-third-field="number3">
+ * </test-ts-component>
+ * ```
+ * @element test-ts-component
+ * @slot starting-slot a slotted element thing goes here
+ *
+ *
+ */
 export class TestTsComponentComponent extends LitElement {
   @property({ type: String, attribute: 'test-ts-component-title' })
   testTsComponentTitle: string;

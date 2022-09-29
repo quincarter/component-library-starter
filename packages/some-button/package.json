@@ -1,20 +1,38 @@
 {
-  "name": "@quincarter/test-ts-component",
-  "version": "1.3.2",
+  "name": "@quincarter/some-button",
+  "version": "0.1.0",
   "license": "MIT",
-  "main": "dist/@quincarter/test-ts-component.js",
-  "module": "dist/@quincarter/test-ts-component.js",
+  "main": "dist/@quincarter/some-button.js",
+  "module": "dist/@quincarter/some-button.js",
+  "exports": {
+    ".": "./out-tsc/index.js",
+    "./SomeButton": {
+      "import": "./out-tsc/src/some-button.js",
+      "require": "./out-tsc/src/some-button.js",
+      "types": "./out-tsc/src/some-button.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./out-tsc/index.d.ts"
+      ],
+      "SomeButton": [
+        "./out-tsc/src/some-button.d.ts"
+      ]
+    }
+  },
   "files": [
-    "dist",
-    "README.md"
+    "README.md",
+    "out-tsc"
   ],
+  "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
-  "private": false,
   "scripts": {
     "build": "tsc",
-    "postinstall": "yarn run docs:md",
+    "postbuild": "yarn run docs:md",
     "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch",

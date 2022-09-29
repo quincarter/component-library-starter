@@ -4,13 +4,34 @@
   "license": "MIT",
   "main": "dist/@quincarter/<%=fileName%>.js",
   "module": "dist/@quincarter/<%=fileName%>.js",
-  "files": ["dist", "README.md", "out-tsc/src"],
+  "exports": {
+    ".": "./out-tsc/index.js",
+    "./<%=className%>": {
+      "import": "./out-tsc/src/<%=fileName%>.js",
+      "require": "./out-tsc/src/<%=fileName%>.js",
+      "types": "./out-tsc/src/<%=fileName%>.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./out-tsc/index.d.ts"
+      ],
+      "<%=className%>": [
+        "./out-tsc/src/<%=fileName%>.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "README.md",
+    "out-tsc"
+  ],
   "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
   "scripts": {
-    "build": "tsc && rollup -c rollup.config.js",
+    "build": "tsc",
     "postbuild": "yarn run docs:md",
     "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
@@ -19,7 +40,7 @@
     "lint:fix": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
     "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore"
   },
-  "peerDependencies": {
+  "dependencies": {
     "lit": "2.x"
   }
 }

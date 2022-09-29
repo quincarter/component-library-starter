@@ -1,6 +1,7 @@
 import { LitElement, html, HTMLTemplateResult } from 'lit';
 import { property } from 'lit/decorators.js'
 import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
+import { I<%=className%> } from '../core/<%=className%>.interface';
 
 /**
  * This is a short description of your component. Change me.
@@ -14,6 +15,19 @@ import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
  * yarn add @quincarter/<%=fileName%>
  * ```
  *
+ * ## Imports
+ * * if you just need the web component as-is
+ * ```javascript
+ * import '@quincarter/<%=fileName%>';
+ * ```
+ * * If you need to rename the element for some reason, you can do this:
+ * ```javascript
+ * import { <%=className%> } from '@quincarter/<%=fileName%>/<%=className%>';
+ *
+ * // then define the component yourself with a custom tag name
+ * customElements.define('foo-my-tag-here-bar', <%=className%>);
+ * ```
+ *
  * ## Usage
  * ```html
  * <<%=fileName%> my-<%=fileName%>-title="testing this attribute works">
@@ -23,7 +37,7 @@ import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
  * @slot card-slot a slotted element thing goes here
  *
  */
-export class <%=className%>Component extends LitElement {
+export class <%=className%>Component extends LitElement implements I<%=className%> {
   @property({type: String, attribute: '<%=fileName%>-title'})
   <%=propertyName%>Title: string;
 
