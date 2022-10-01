@@ -155,3 +155,4 @@ Tooling for this project should be fairly straightforward. Most users can get go
 - [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) - Great for executing workspace commands. This project is setup to simplify these commands with built in `package.json` scripts. If you want this, use it at your own risk.
 - [Ayu Mirage Color Scheme](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) - An easy on the eyes color scheme for VS Code that makes code much more pleasant to look at.
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - Colorful icons that give your VS Code some character
+- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) - Colorizes your VSCode windows. Great for those of us that have 15 windows open at a time. Assign a color and recognize that code window immediately. 
