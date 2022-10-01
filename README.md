@@ -78,9 +78,7 @@ If you want to add any additional scripts prior to starting your project, add th
 
 ```json
 "scripts": {
-  // some other scripts above
   "bundle-my-code": "rollup -c",
-  // some other scripts below
 }
 ```
 
@@ -91,9 +89,7 @@ If you want to add any additional scripts prior to starting your project, add th
 
 ```json
 "scripts": {
-  // some other scripts above
   "bundle": "yarn nx run-many --target=bundle-my-code",
-  // some other scripts below
 }
 ```
 
@@ -119,9 +115,7 @@ yarn <script name>
 
 ```json
 {
-  // other config above
   "cacheableOperations": ["build", "test", "format", "lint", "lint:fix"]
-  // other config below
 }
 ```
 
