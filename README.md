@@ -12,25 +12,19 @@ yarn install
 
 #### This library uses Changesets for publishing to npm and Changelogs in each package
 * For commands and other info, see: [Changesets README.md](./.changeset/README.md)
+* Commands are simplified by running `yarn changeset:add` to stage the change to be published.
+    * Changesets uses the `publishConfig` key on the package.json. *All `package.json` files must have the _exact_ same publishConfig value or changesets may fail to publish in a CI environment.*
 ## Generating Components
-#### New JS Component:
-
-```bash
-yarn run new-component:js
-```
-#### OR this will also work
-```bash
-yarn run new-component:js my-component-name
-```
 
 #### New TypeScript Component
 ```bash
-yarn run new-component:ts
+yarn new-component:ts
 ```
 #### OR this will also work
 ```bash
-yarn run new-component:ts my-component-name
+yarn new-component:ts my-component-name
 ```
+*[postnew-component:ts](./package.json#L20) script will run after component is successfully created, adding it to all of the cached operations.*
 
 ## Storybook/Development
 ### Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
@@ -48,7 +42,7 @@ yarn start
 - This is simplified by running:
 
 ```bash
-yarn run build
+yarn build
 ```
 
 ### Package Linking
@@ -64,10 +58,10 @@ Scripts can be cached as well (see below) for faster times in a pipeline or in l
 
 All scripts must start with a run command like this:
 ```bash
-yarn run <script name>
+yarn <script name>
 ```
 
-You can also just run `yarn run` and it will ask you which script you would like to run from a list. 
+You can also just run `yarn` and it will ask you which script you would like to run from a list. 
 ## Main Scripts
 - `start` runs your app for development, reloading on file changes and using Storybook
 - `storybook:build` builds storybook for static site hosting i.e. github pages

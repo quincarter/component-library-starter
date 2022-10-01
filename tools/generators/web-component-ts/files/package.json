@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "postbuild": "yarn run docs:md",
+    "postbuild": "yarn docs:md",
     "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch",
