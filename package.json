@@ -17,7 +17,7 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
     "new-component:ts": "nx workspace-generator web-component-ts $1",
-    "postnew-component:ts": "yarn install && yarn build && yarn test && yarn docs:md",
+    "postnew-component:ts": "yarn install && yarn lint:fix && yarn format && yarn build && yarn test && yarn docs:md",
     "rimraf-dist": "rimraf packages/**/dist",
     "rimraf": "rimraf --",
     "pretty-quick": "pretty-quick --staged --bail",
