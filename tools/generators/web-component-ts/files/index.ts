@@ -1,5 +1,5 @@
-import { <%=className%>Component } from './src/<%=fileName%>.js';
+import { <%=className%><%=componentTypeClass%> } from './src/<%=fileName%>.js';
 
 if (!customElements.get('<%=fileName%>')) {
-  customElements.define('<%=fileName%>', <%=className%>Component);
+  customElements.define('<%=fileName%>', <%=className%><%=componentTypeClass%>);
 }

@@ -23,9 +23,9 @@ packages/**/node_modules
 /dist/
 **/dist/**
 packages/**/dist
-packages/**/out-tsc
+packages/**/lib
 packages/**/coverage
-/out-tsc/
+/lib/
 
 storybook-static
 custom-elements.json

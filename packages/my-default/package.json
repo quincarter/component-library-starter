@@ -1,18 +1,18 @@
 {
-  "name": "@quincarter/<%=fileName%>",
+  "name": "@quincarter/my-default",
   "version": "0.0.1",
-  "description": "This is just an example <% if (componentType) { %> <%=componentType%> <% } else { %> component <% } %>",
+  "description": "This is just an example  component ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-default"
   },
   "exports": {
     ".": "./lib/index.js",
-    "./<%=className%>": {
-      "import": "./lib/src/<%=fileName%>.js",
-      "require": "./lib/src/<%=fileName%>.js",
-      "types": "./lib/src/<%=fileName%>.d.ts"
+    "./MyDefault": {
+      "import": "./lib/src/my-default.js",
+      "require": "./lib/src/my-default.js",
+      "types": "./lib/src/my-default.d.ts"
     }
   },
   "typesVersions": {
@@ -20,8 +20,8 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "<%=className%>": [
-        "./lib/src/<%=fileName%>.d.ts"
+      "MyDefault": [
+        "./lib/src/my-default.d.ts"
       ]
     }
   },

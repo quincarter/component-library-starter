@@ -1,7 +1,7 @@
 import { LitElement, html, HTMLTemplateResult } from 'lit';
 import { property } from 'lit/decorators.js'
-import { <%=className%>ComponentStyles } from './<%=fileName%>.styles.js';
-import { I<%=className%> } from '../core/<%=className%>.interface';
+import { <%=className%><%=componentTypeClass%>Styles } from './<%=fileName%>.styles.js';
+import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.interface';
 
 /**
  * This is a short description of your component. Change me in [./src/<%=fileName%>.ts](./src/<%=fileName%>.ts#L6-42) in the JSDoc above the Component Class.
@@ -38,25 +38,57 @@ import { I<%=className%> } from '../core/<%=className%>.interface';
  * </<%=fileName%>>
  * ```
  * @element <%=fileName%>
+ * <% if (componentType != "component") { %>
  * @slot card-slot a slotted element thing goes here
+ * <% } %>
  *
  */
-export class <%=className%>Component extends LitElement implements I<%=className%> {
-  @property({type: String, attribute: '<%=fileName%>-title'})
-  <%=propertyName%>Title: string;
+export class <%=className%><%=componentTypeClass%> extends LitElement implements I<%=className%><%=componentTypeClass%> {
+  <% if (componentType == "component" || componentType == "card") { %>
+    @property({type: String, attribute: '<%=fileName%>-title'})
+    <%=propertyName%>Title: string;
+  <% } %>
+  <% if (componentType == "button") { %>
+    @property({type: String, attribute: '<%=componentType%>-title'})
+    <%=componentType%>Title: string;
+
+    @property({type: Boolean, attribute: '<%=componentType%>-disabled'})
+    <%=componentType%>Disabled = false;
+
+    @property({type: String, attribute: '<%=componentType%>-color'})
+    <%=componentType%>Color: string;
+  <% } %>
 
   static get styles() {
-    return [<%=className%>ComponentStyles];
+    return [
+      <%=className%><%=componentTypeClass%>Styles
+    ];
   }
 
   constructor() {
     super();
-    this.<%=propertyName%>Title = "<%=fileName%> works!";
+    <% if (componentType == "component" || componentType == "card") { %>
+      this.<%=propertyName%>Title = "<%=fileName%> works!";
+    <% } %>
+
+    <% if (componentType == "button") { %>
+      this.<%=componentType%>Title = "<%=fileName%> works!";
+      this.<%=componentType%>Color = "rebeccapurple";
+    <% } %>
   }
 
   render(): HTMLTemplateResult {
     return html`
-      <div class="card">
+      <% if (componentType == "component") { %> 
+        <h1 class="<%=fileName%>-test-color">${this.<%=propertyName%>Title}</h1>
+        <div>
+          <p>Your component is located in <code>/packages/<%=fileName%></code> and the component and styles are already separated into their own files.</p>
+          <p>This is just a test component generated using the component generator</p>
+          <p>Edit the <code><%=fileName%>.ts</code> code or remove this code and use it as your own.</p>
+        </div>
+      <% } %>
+      <% if (componentType == "card") { %> 
+        <div class="card">
         <div class="card-title">
           <h1 class="<%=fileName%>-test-color">${this.<%=propertyName%>Title}</h1>
         </div>
@@ -67,6 +99,12 @@ export class <%=className%>Component extends LitElement implements I<%=className
           <slot name="card-slot"></slot>
         </div>
       </div>
+      <% } %>
+      <% if (componentType == "button") { %> 
+        <div class="button-container">
+          <button class="button <%=fileName%>-test-color" style="background-color: ${this.buttonColor};">${this.<%=componentType%>Title}</button>
+        </div>
+      <% } %>
     `;
   }
 }

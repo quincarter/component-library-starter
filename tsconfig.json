@@ -17,7 +17,7 @@
     "strict": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "outDir": "out-tsc",
+    "outDir": "lib",
     "inlineSources": true,
     "rootDir": "./",
     "incremental": true

@@ -1,18 +1,18 @@
 {
-  "name": "@quincarter/<%=fileName%>",
+  "name": "@quincarter/my-button-test",
   "version": "0.0.1",
-  "description": "This is just an example <% if (componentType) { %> <%=componentType%> <% } else { %> component <% } %>",
+  "description": "This is just an example  button ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-button-test"
   },
   "exports": {
     ".": "./lib/index.js",
-    "./<%=className%>": {
-      "import": "./lib/src/<%=fileName%>.js",
-      "require": "./lib/src/<%=fileName%>.js",
-      "types": "./lib/src/<%=fileName%>.d.ts"
+    "./MyButtonTest": {
+      "import": "./lib/src/my-button-test.js",
+      "require": "./lib/src/my-button-test.js",
+      "types": "./lib/src/my-button-test.d.ts"
     }
   },
   "typesVersions": {
@@ -20,8 +20,8 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "<%=className%>": [
-        "./lib/src/<%=fileName%>.d.ts"
+      "MyButtonTest": [
+        "./lib/src/my-button-test.d.ts"
       ]
     }
   },
