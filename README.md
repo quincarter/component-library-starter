@@ -13,7 +13,8 @@ yarn install
 #### This library uses Changesets for publishing to npm and Changelogs in each package
 * For commands and other info, see: [Changesets README.md](./.changeset/README.md)
 * Commands are simplified by running `yarn changeset:add` to stage the change to be published.
-    * Changesets uses the `publishConfig` key on the package.json. *All `package.json` files must have the _exact_ same publishConfig value or changesets may fail to publish in a CI environment.*
+    * Changesets uses the `publishConfig` key on the package.json for the destination registry/publish location. 
+    * __All `package.json` files must have the _exact_ same publishConfig value or changesets may fail to publish in a CI environment.__
 ## Generating Components
 
 #### New TypeScript Component
@@ -24,7 +25,7 @@ yarn new-component:ts
 ```bash
 yarn new-component:ts my-component-name
 ```
-*[postnew-component:ts](./package.json#L20) script will run after component is successfully created, adding it to all of the cached operations.*
+__[postnew-component:ts](./package.json#L20) script will run after component is successfully created, adding it to all of the cached operations.__
 
 ## Storybook/Development
 ### Components are served with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) when in development.
