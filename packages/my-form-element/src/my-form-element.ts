@@ -76,9 +76,6 @@ import { IMyFormElementButton } from '../core/MyFormElement.interface';
  *
  * @element my-form-element
  *
- * @slot card-slot a slotted element thing goes here
- *
- *
  */
 export class MyFormElementButton
   extends LitElement

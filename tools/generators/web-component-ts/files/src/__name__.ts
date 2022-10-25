@@ -75,7 +75,7 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  *
  *
  * @element <%=fileName%>
- * <% if (componentType != "component") { %>
+ * <% if (componentType == "card") { %>
  * @slot card-slot a slotted element thing goes here
  * <% } %>
  *
