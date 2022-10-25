@@ -1,6 +1,6 @@
 import { css, CSSResult } from 'lit';
 
-export const MyTestCardCardStyles: CSSResult = css`
+export const MyCardTestCardStyles: CSSResult = css`
   :host {
     --test-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
       0 3px 6px rgba(0, 0, 0, 0.23);
@@ -19,7 +19,7 @@ export const MyTestCardCardStyles: CSSResult = css`
     gap: 1rem;
   }
 
-  .my-test-card-test-color {
+  .my-card-test-test-color {
     color: rebeccapurple;
   }
 `;

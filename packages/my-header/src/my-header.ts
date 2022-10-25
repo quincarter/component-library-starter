@@ -19,6 +19,8 @@ import { IMyHeaderComponent } from '../core/MyHeader.interface';
  * yarn add @quincarter/my-header
  * ```
  *
+ * # Web Component
+ * * Use this method if you need to use my-header in its entirety
  * ## Imports
  * * if you just need the web component as-is
  * ```javascript
@@ -32,11 +34,46 @@ import { IMyHeaderComponent } from '../core/MyHeader.interface';
  * customElements.define('foo-my-tag-here-bar', MyHeader);
  * ```
  *
- * ## Usage
+ * ## WC Usage Example
  * ```html
  * <my-header my-my-header-title="testing this attribute works">
  * </my-header>
  * ```
+ *
+ * # Core
+ * * Use this method if you need to use pieces of my-header, but you don't need the entire web component.
+ * ## Imports
+ * ```typescript
+ * import { IMyHeaderComponent,  MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeader';
+ * ```
+ *
+ * ## Core Usage Example
+ * ### Core Interface
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { IMyHeaderComponent } from '@quincarter/my-header/CoreMyHeader';
+ *
+ * export class FooBar extends LitElement implements IMyHeaderComponent {
+ * // TODO: Implement Interface definition
+ * }
+ * ```
+ *
+ * ### Core Styles
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeader';
+ *
+ * export class BarFoo extends LitElement {
+ *     static get styles(): CSSResult[] {
+ *         return [
+ *             MyHeaderComponentStyles,
+ *             css`/* my css here /*`
+ *         ];
+ *     }
+ * }
+ * ```
+ *
+ *
  * @element my-header
  *
  *
@@ -45,6 +82,11 @@ export class MyHeaderComponent
   extends LitElement
   implements IMyHeaderComponent
 {
+  /**
+   * Determines the title value of the component
+   * @attr my-header-title
+   * @default my-header works!
+   */
   @property({ type: String, attribute: 'my-header-title' })
   myHeaderTitle: string;
 

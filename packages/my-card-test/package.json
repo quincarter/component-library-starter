@@ -1,24 +1,24 @@
 {
-  "name": "@quincarter/my-test-card",
-  "version": "0.1.0",
+  "name": "@quincarter/my-card-test",
+  "version": "0.0.1",
   "description": "This is just an example  card ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-test-card"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-card-test"
   },
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./MyTestCard": {
-      "import": "./lib/src/my-test-card.js",
-      "require": "./lib/src/my-test-card.js",
-      "types": "./lib/src/my-test-card.d.ts"
+    "./MyCardTest": {
+      "import": "./lib/src/my-card-test.js",
+      "require": "./lib/src/my-card-test.js",
+      "types": "./lib/src/my-card-test.d.ts"
     },
-    "./CoreMyTestCard": {
-      "import": "./lib/core/my-test-card.core.js",
-      "require": "./lib/core/my-test-card.core.js",
-      "types": "./lib/core/my-test-card.core.d.ts"
+    "./CoreMyCardTest": {
+      "import": "./lib/core/my-card-test.core.js",
+      "require": "./lib/core/my-card-test.core.js",
+      "types": "./lib/core/my-card-test.core.d.ts"
     }
   },
   "typesVersions": {
@@ -26,11 +26,11 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "MyTestCard": [
-        "./lib/src/my-test-card.d.ts"
+      "MyCardTest": [
+        "./lib/src/my-card-test.d.ts"
       ],
-      "CoreMyTestCard": [
-        "./lib/core/my-test-card.core.d.ts"
+      "CoreMyCardTest": [
+        "./lib/core/my-card-test.core.d.ts"
       ]
     }
   },

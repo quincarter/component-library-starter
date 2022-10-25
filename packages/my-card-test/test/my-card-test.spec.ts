@@ -1,13 +1,13 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import { MyTestCardCard } from '../src/my-test-card';
+import { MyCardTestCard } from '../src/my-card-test';
 import '../index.js';
 
-describe('MyTestCardCard', () => {
-  let element: MyTestCardCard;
+describe('MyCardTestCard', () => {
+  let element: MyCardTestCard;
   beforeEach(async () => {
-    element = await fixture(html`<my-test-card></my-test-card>`);
+    element = await fixture(html`<my-card-test></my-card-test>`);
   });
 
   it('renders a card', () => {
