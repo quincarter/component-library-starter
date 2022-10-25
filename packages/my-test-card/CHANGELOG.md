@@ -1,4 +1,4 @@
-# @quincarter/my-form-element
+# @quincarter/my-test-card
 
 ## 0.1.0
 

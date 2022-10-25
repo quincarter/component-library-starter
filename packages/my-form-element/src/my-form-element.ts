@@ -47,12 +47,27 @@ export class MyFormElementButton
   extends LitElement
   implements IMyFormElementButton
 {
+  /**
+   * Determines the title value of the button
+   * @attr button-title
+   * @default "my-form-element works!"
+   */
   @property({ type: String, attribute: 'button-title' })
   buttonTitle: string;
 
+  /**
+   * Determines if the button is disabled
+   * @attr button-disabled
+   * @default false
+   */
   @property({ type: Boolean, attribute: 'button-disabled' })
   buttonDisabled = false;
 
+  /**
+   * Determines the button color
+   * @attr button-color
+   * @default rebeccapurple
+   */
   @property({ type: String, attribute: 'button-color' })
   buttonColor: string;
 

@@ -45,16 +45,36 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  */
 export class <%=className%><%=componentTypeClass%> extends LitElement implements I<%=className%><%=componentTypeClass%> {
   <% if (componentType == "component" || componentType == "card") { %>
+    /**
+     * Determines the title value of the component
+     * @attr <%=fileName%>-title
+     * @default "<%=fileName%> works!"
+     */
     @property({type: String, attribute: '<%=fileName%>-title'})
     <%=propertyName%>Title: string;
   <% } %>
   <% if (componentType == "button") { %>
+    /**
+     * Determines the title value of the <%=componentType%>
+     * @attr <%=componentType%>-title
+     * @default "<%=fileName%> works!"
+     */
     @property({type: String, attribute: '<%=componentType%>-title'})
     <%=componentType%>Title: string;
 
+    /**
+     * Determines if the <%=componentType%> is disabled
+     * @attr <%=componentType%>-disabled
+     * @default false
+     */
     @property({type: Boolean, attribute: '<%=componentType%>-disabled'})
     <%=componentType%>Disabled = false;
 
+    /**
+     * Determines the <%=componentType%> color
+     * @attr <%=componentType%>-color
+     * @default rebeccapurple
+     */
     @property({type: String, attribute: '<%=componentType%>-color'})
     <%=componentType%>Color: string;
   <% } %>
