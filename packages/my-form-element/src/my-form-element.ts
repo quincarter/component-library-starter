@@ -50,7 +50,7 @@ export class MyFormElementButton
   /**
    * Determines the title value of the button
    * @attr button-title
-   * @default "my-form-element works!"
+   * @default my-form-element works!
    */
   @property({ type: String, attribute: 'button-title' })
   buttonTitle: string;

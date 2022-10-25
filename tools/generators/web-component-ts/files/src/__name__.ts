@@ -48,7 +48,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
     /**
      * Determines the title value of the component
      * @attr <%=fileName%>-title
-     * @default "<%=fileName%> works!"
+     * @default <%=fileName%> works!
      */
     @property({type: String, attribute: '<%=fileName%>-title'})
     <%=propertyName%>Title: string;
@@ -57,7 +57,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
     /**
      * Determines the title value of the <%=componentType%>
      * @attr <%=componentType%>-title
-     * @default "<%=fileName%> works!"
+     * @default <%=fileName%> works!
      */
     @property({type: String, attribute: '<%=componentType%>-title'})
     <%=componentType%>Title: string;
