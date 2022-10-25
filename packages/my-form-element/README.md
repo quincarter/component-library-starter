@@ -36,11 +36,11 @@ customElements.define('foo-my-tag-here-bar', MyFormElement);
 
 ## Properties
 
-| Property         | Attribute         | Type      | Default                      | Description                              |
-|------------------|-------------------|-----------|------------------------------|------------------------------------------|
-| `buttonColor`    | `button-color`    | `string`  | "rebeccapurple"              | Determines the button color              |
-| `buttonDisabled` | `button-disabled` | `boolean` | "false"                      | Determines if the button is disabled     |
-| `buttonTitle`    | `button-title`    | `string`  | "\"my-form-element works!\"" | Determines the title value of the button |
+| Property         | Attribute         | Type      | Default                  | Description                              |
+|------------------|-------------------|-----------|--------------------------|------------------------------------------|
+| `buttonColor`    | `button-color`    | `string`  | "rebeccapurple"          | Determines the button color              |
+| `buttonDisabled` | `button-disabled` | `boolean` | "false"                  | Determines if the button is disabled     |
+| `buttonTitle`    | `button-title`    | `string`  | "my-form-element works!" | Determines the title value of the button |
 
 ## Slots
 
