@@ -1,13 +1,7 @@
 # @quincarter/my-form-element
 
-## 0.1.0
-
-### Minor Changes
-
-- updated minor version
-
-## 0.0.2
+## 0.1.2
 
 ### Patch Changes
 
-- Updated versioning and readme
+- adding changes for docs

@@ -19,6 +19,8 @@ import { IMyFormElementButton } from '../core/MyFormElement.interface';
  * yarn add @quincarter/my-form-element
  * ```
  *
+ * # Web Component
+ * * Use this method if you need to use my-form-element in its entirety
  * ## Imports
  * * if you just need the web component as-is
  * ```javascript
@@ -32,11 +34,46 @@ import { IMyFormElementButton } from '../core/MyFormElement.interface';
  * customElements.define('foo-my-tag-here-bar', MyFormElement);
  * ```
  *
- * ## Usage
+ * ## WC Usage Example
  * ```html
  * <my-form-element my-my-form-element-title="testing this attribute works">
  * </my-form-element>
  * ```
+ *
+ * # Core
+ * * Use this method if you need to use pieces of my-form-element, but you don't need the entire web component.
+ * ## Imports
+ * ```typescript
+ * import { IMyFormElementButton,  MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElement';
+ * ```
+ *
+ * ## Core Usage Example
+ * ### Core Interface
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { IMyFormElementButton } from '@quincarter/my-form-element/CoreMyFormElement';
+ *
+ * export class FooBar extends LitElement implements IMyFormElementButton {
+ * // TODO: Implement Interface definition
+ * }
+ * ```
+ *
+ * ### Core Styles
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElement';
+ *
+ * export class BarFoo extends LitElement {
+ *     static get styles(): CSSResult[] {
+ *         return [
+ *             MyFormElementButtonStyles,
+ *             css`/* my css here /*`
+ *         ];
+ *     }
+ * }
+ * ```
+ *
+ *
  * @element my-form-element
  *
  * @slot card-slot a slotted element thing goes here

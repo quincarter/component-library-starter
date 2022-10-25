@@ -19,6 +19,8 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  * yarn add @quincarter/<%=fileName%>
  * ```
  *
+ * # Web Component
+ * * Use this method if you need to use <%=fileName%> in its entirety
  * ## Imports
  * * if you just need the web component as-is
  * ```javascript
@@ -32,11 +34,46 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  * customElements.define('foo-my-tag-here-bar', <%=className%>);
  * ```
  *
- * ## Usage
+ * ## WC Usage Example
  * ```html
  * <<%=fileName%> my-<%=fileName%>-title="testing this attribute works">
  * </<%=fileName%>>
  * ```
+ *
+ * # Core
+ * * Use this method if you need to use pieces of <%=fileName%>, but you don't need the entire web component.
+ * ## Imports
+ * ```typescript
+ * import { I<%=className%><%=componentTypeClass%>,  <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ * ```
+ *
+ * ## Core Usage Example
+ * ### Core Interface
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { I<%=className%><%=componentTypeClass%> } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ *
+ * export class FooBar extends LitElement implements I<%=className%><%=componentTypeClass%> {
+ * // TODO: Implement Interface definition
+ * }
+ * ```
+ *
+ * ### Core Styles
+ * ```typescript
+ * import { LitElement } from 'lit';
+ * import { <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ *
+ * export class BarFoo extends LitElement {
+ *     static get styles(): CSSResult[] {
+ *         return [
+ *             <%=className%><%=componentTypeClass%>Styles,
+ *             css`/* my css here /*`
+ *         ];
+ *     }
+ * }
+ * ```
+ *
+ *
  * @element <%=fileName%>
  * <% if (componentType != "component") { %>
  * @slot card-slot a slotted element thing goes here
