@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "lit-svg",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "SVG Name (image)",
+      "x-prompt": "SVG Name (image)",
+      "pattern": "^[a-zA-Z]",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "componentType": {
+      "type": "string",
+      "description": "Component Type:",
+      "x-prompt": {
+        "message": "Which type of library would you like to generate?",
+        "type": "list",
+        "items": [
+          {
+            "value": "component",
+            "label": "Default Starter Component"
+          },
+          {
+            "value": "button",
+            "label": "Button"
+          },
+          {
+            "value": "card",
+            "label": "Card"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name"]
+}

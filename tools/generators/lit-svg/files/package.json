@@ -7,18 +7,12 @@
     "type": "git",
     "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
   },
-  "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./<%=className%>": {
       "import": "./lib/src/<%=fileName%>.js",
       "require": "./lib/src/<%=fileName%>.js",
       "types": "./lib/src/<%=fileName%>.d.ts"
-    },
-    "./Core<%=className%>": {
-      "import": "./lib/core/<%=fileName%>.core.js",
-      "require": "./lib/core/<%=fileName%>.core.js",
-      "types": "./lib/core/<%=fileName%>.core.d.ts"
     }
   },
   "typesVersions": {
@@ -28,19 +22,12 @@
       ],
       "<%=className%>": [
         "./lib/src/<%=fileName%>.d.ts"
-      ],
-      "Core<%=className%>": [
-        "./lib/core/<%=fileName%>.core.d.ts"
       ]
     }
   },
   "files": [
     "README.md",
-    "lib/core",
-    "lib/src",
-    "lib/wc",
-    "lib/index.*",
-    "lib/tsconfig.tsbuildinfo"
+    "lib"
   ],
   "private": false,
   "publishConfig": {

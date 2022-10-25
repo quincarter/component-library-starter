@@ -1,6 +1,6 @@
-import { LitElement, html, HTMLTemplateResult, CSSResult } from 'lit';
+import { LitElement, html, HTMLTemplateResult } from 'lit';
 import { property } from 'lit/decorators.js'
-import { <%=className%><%=componentTypeClass%>Styles } from '../core/<%=fileName%>.styles';
+import { <%=className%><%=componentTypeClass%>Styles } from './<%=fileName%>.styles.js';
 import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.interface';
 
 /**
@@ -59,7 +59,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
     <%=componentType%>Color: string;
   <% } %>
 
-  static get styles(): CSSResult[] {
+  static get styles() {
     return [
       <%=className%><%=componentTypeClass%>Styles
     ];
@@ -79,7 +79,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
 
   render(): HTMLTemplateResult {
     return html`
-      <% if (componentType == "component") { %>
+      <% if (componentType == "component") { %> 
         <h1 class="<%=fileName%>-test-color">${this.<%=propertyName%>Title}</h1>
         <div>
           <p>Your component is located in <code>/packages/<%=fileName%></code> and the component and styles are already separated into their own files.</p>
@@ -87,7 +87,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
           <p>Edit the <code><%=fileName%>.ts</code> code or remove this code and use it as your own.</p>
         </div>
       <% } %>
-      <% if (componentType == "card") { %>
+      <% if (componentType == "card") { %> 
         <div class="card">
         <div class="card-title">
           <h1 class="<%=fileName%>-test-color">${this.<%=propertyName%>Title}</h1>
@@ -100,7 +100,7 @@ export class <%=className%><%=componentTypeClass%> extends LitElement implements
         </div>
       </div>
       <% } %>
-      <% if (componentType == "button") { %>
+      <% if (componentType == "button") { %> 
         <div class="button-container">
           <button class="button <%=fileName%>-test-color" style="background-color: ${this.buttonColor};">${this.<%=componentType%>Title}</button>
         </div>

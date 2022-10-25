@@ -1,24 +1,24 @@
 {
-  "name": "@quincarter/<%=fileName%>",
+  "name": "@quincarter/my-test-card",
   "version": "0.0.1",
-  "description": "This is just an example <% if (componentType) { %> <%=componentType%> <% } else { %> component <% } %>",
+  "description": "This is just an example  card ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-test-card"
   },
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./<%=className%>": {
-      "import": "./lib/src/<%=fileName%>.js",
-      "require": "./lib/src/<%=fileName%>.js",
-      "types": "./lib/src/<%=fileName%>.d.ts"
+    "./MyTestCard": {
+      "import": "./lib/src/my-test-card.js",
+      "require": "./lib/src/my-test-card.js",
+      "types": "./lib/src/my-test-card.d.ts"
     },
-    "./Core<%=className%>": {
-      "import": "./lib/core/<%=fileName%>.core.js",
-      "require": "./lib/core/<%=fileName%>.core.js",
-      "types": "./lib/core/<%=fileName%>.core.d.ts"
+    "./CoreMyTestCard": {
+      "import": "./lib/core/my-test-card.core.js",
+      "require": "./lib/core/my-test-card.core.js",
+      "types": "./lib/core/my-test-card.core.d.ts"
     }
   },
   "typesVersions": {
@@ -26,11 +26,11 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "<%=className%>": [
-        "./lib/src/<%=fileName%>.d.ts"
+      "MyTestCard": [
+        "./lib/src/my-test-card.d.ts"
       ],
-      "Core<%=className%>": [
-        "./lib/core/<%=fileName%>.core.d.ts"
+      "CoreMyTestCard": [
+        "./lib/core/my-test-card.core.d.ts"
       ]
     }
   },
