@@ -1,6 +1,6 @@
 {
   "name": "@quincarter/my-card-test",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "This is just an example  card ",
   "license": "MIT",
   "repository": {
@@ -10,12 +10,12 @@
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./MyCardTest": {
+    "./MyCardTestCard": {
       "import": "./lib/src/my-card-test.js",
       "require": "./lib/src/my-card-test.js",
       "types": "./lib/src/my-card-test.d.ts"
     },
-    "./CoreMyCardTest": {
+    "./CoreMyCardTestCard": {
       "import": "./lib/core/my-card-test.core.js",
       "require": "./lib/core/my-card-test.core.js",
       "types": "./lib/core/my-card-test.core.d.ts"
@@ -26,10 +26,10 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "MyCardTest": [
+      "./MyCardTestCard": [
         "./lib/src/my-card-test.d.ts"
       ],
-      "CoreMyCardTest": [
+      "./CoreMyCardTestCard": [
         "./lib/core/my-card-test.core.d.ts"
       ]
     }

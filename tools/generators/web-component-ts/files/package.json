@@ -10,12 +10,20 @@
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
+    <% if (componentType != "component") { %>
+    "./<%=className%><%=componentTypeClass%>": {
+    <% } else { %>
     "./<%=className%>": {
+  <% } %>
       "import": "./lib/src/<%=fileName%>.js",
       "require": "./lib/src/<%=fileName%>.js",
       "types": "./lib/src/<%=fileName%>.d.ts"
     },
+    <% if (componentType != "component") { %>
+    "./Core<%=className%><%=componentTypeClass%>": {
+    <% } else { %>
     "./Core<%=className%>": {
+  <% } %>
       "import": "./lib/core/<%=fileName%>.core.js",
       "require": "./lib/core/<%=fileName%>.core.js",
       "types": "./lib/core/<%=fileName%>.core.d.ts"
@@ -26,10 +34,18 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "<%=className%>": [
+      <% if (componentType != "component") { %>
+      "./<%=className%><%=componentTypeClass%>": [
+      <% } else { %>
+      "./<%=className%>": [
+    <% } %>
         "./lib/src/<%=fileName%>.d.ts"
       ],
-      "Core<%=className%>": [
+      <% if (componentType != "component") { %>
+      "./Core<%=className%><%=componentTypeClass%>": [
+      <% } else { %>
+      "./Core<%=className%>": [
+    <% } %>
         "./lib/core/<%=fileName%>.core.d.ts"
       ]
     }

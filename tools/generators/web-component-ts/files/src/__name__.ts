@@ -28,10 +28,16 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  * ```
  * * If you need to rename the element for some reason, you can do this:
  * ```javascript
+ * <% if (componentType != "component") { %> import { <%=className%><%=componentTypeClass%> } from '@quincarter/<%=fileName%>/<%=className%><%=componentTypeClass%>';
+ *
+ * // then define the component yourself with a custom tag name
+ * customElements.define('foo-my-tag-here-bar', <%=className%><%=componentTypeClass%>);
+ *  <% } else { %>
  * import { <%=className%> } from '@quincarter/<%=fileName%>/<%=className%>';
  *
  * // then define the component yourself with a custom tag name
  * customElements.define('foo-my-tag-here-bar', <%=className%>);
+ * <% } %>
  * ```
  *
  * ## WC Usage Example

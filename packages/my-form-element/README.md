@@ -24,10 +24,11 @@ import '@quincarter/my-form-element';
 ```
 * If you need to rename the element for some reason, you can do this:
 ```javascript
-import { MyFormElement } from '@quincarter/my-form-element/MyFormElement';
+ import { MyFormElementButton } from '@quincarter/my-form-element/MyFormElementButton';
 
 // then define the component yourself with a custom tag name
-customElements.define('foo-my-tag-here-bar', MyFormElement);
+customElements.define('foo-my-tag-here-bar', MyFormElementButton);
+
 ```
 
 ## WC Usage Example

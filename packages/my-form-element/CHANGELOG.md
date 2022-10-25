@@ -1,7 +1,7 @@
 # @quincarter/my-form-element
 
-## 0.1.2
+## 0.1.3
 
 ### Patch Changes
 
-- adding changes for docs
+- adding exports named properly for core and anything except a default generated component

@@ -106,7 +106,7 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.json": [
+    "!(tools/generators/web-component-ts/**/*)*.json": [
       "eslint --fix",
       "prettier --write"
     ]

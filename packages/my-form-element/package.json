@@ -1,6 +1,6 @@
 {
   "name": "@quincarter/my-form-element",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This is just an example  button ",
   "license": "MIT",
   "repository": {
@@ -10,12 +10,12 @@
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./MyFormElement": {
+    "./MyFormElementButton": {
       "import": "./lib/src/my-form-element.js",
       "require": "./lib/src/my-form-element.js",
       "types": "./lib/src/my-form-element.d.ts"
     },
-    "./CoreMyFormElement": {
+    "./CoreMyFormElementButton": {
       "import": "./lib/core/my-form-element.core.js",
       "require": "./lib/core/my-form-element.core.js",
       "types": "./lib/core/my-form-element.core.d.ts"
@@ -26,10 +26,10 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "MyFormElement": [
+      "./MyFormElementButton": [
         "./lib/src/my-form-element.d.ts"
       ],
-      "CoreMyFormElement": [
+      "./CoreMyFormElementButton": [
         "./lib/core/my-form-element.core.d.ts"
       ]
     }

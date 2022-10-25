@@ -24,10 +24,11 @@ import '@quincarter/my-card-test';
 ```
 * If you need to rename the element for some reason, you can do this:
 ```javascript
-import { MyCardTest } from '@quincarter/my-card-test/MyCardTest';
+ import { MyCardTestCard } from '@quincarter/my-card-test/MyCardTestCard';
 
 // then define the component yourself with a custom tag name
-customElements.define('foo-my-tag-here-bar', MyCardTest);
+customElements.define('foo-my-tag-here-bar', MyCardTestCard);
+
 ```
 
 ## WC Usage Example
