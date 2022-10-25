@@ -1,13 +1,7 @@
 # @quincarter/my-header
 
-## 0.1.2
+## 0.1.3
 
 ### Patch Changes
 
-- adding exports named properly for core and anything except a default generated component
-
-## 0.1.1
-
-### Patch Changes
-
-- Adding change for header docs
+- Updated exports

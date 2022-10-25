@@ -31,3 +31,4 @@ packages/**/coverage
 
 storybook-static
 custom-elements.json
+package.json

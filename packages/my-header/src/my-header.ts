@@ -28,10 +28,12 @@ import { IMyHeaderComponent } from '../core/MyHeader.interface';
  * ```
  * * If you need to rename the element for some reason, you can do this:
  * ```javascript
+ *
  * import { MyHeader } from '@quincarter/my-header/MyHeader';
  *
  * // then define the component yourself with a custom tag name
  * customElements.define('foo-my-tag-here-bar', MyHeader);
+ *
  * ```
  *
  * ## WC Usage Example
@@ -44,14 +46,14 @@ import { IMyHeaderComponent } from '../core/MyHeader.interface';
  * * Use this method if you need to use pieces of my-header, but you don't need the entire web component.
  * ## Imports
  * ```typescript
- * import { IMyHeaderComponent,  MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeader';
+ * import { IMyHeaderComponent,  MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeaderComponent';
  * ```
  *
  * ## Core Usage Example
  * ### Core Interface
  * ```typescript
  * import { LitElement } from 'lit';
- * import { IMyHeaderComponent } from '@quincarter/my-header/CoreMyHeader';
+ * import { IMyHeaderComponent } from '@quincarter/my-header/CoreMyHeaderComponent';
  *
  * export class FooBar extends LitElement implements IMyHeaderComponent {
  * // TODO: Implement Interface definition
@@ -61,7 +63,7 @@ import { IMyHeaderComponent } from '../core/MyHeader.interface';
  * ### Core Styles
  * ```typescript
  * import { LitElement } from 'lit';
- * import { MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeader';
+ * import { MyHeaderComponentStyles } from '@quincarter/my-header/CoreMyHeaderComponent';
  *
  * export class BarFoo extends LitElement {
  *     static get styles(): CSSResult[] {

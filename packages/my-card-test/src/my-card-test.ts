@@ -45,14 +45,14 @@ import { IMyCardTestCard } from '../core/MyCardTest.interface';
  * * Use this method if you need to use pieces of my-card-test, but you don't need the entire web component.
  * ## Imports
  * ```typescript
- * import { IMyCardTestCard,  MyCardTestCardStyles } from '@quincarter/my-card-test/CoreMyCardTest';
+ * import { IMyCardTestCard,  MyCardTestCardStyles } from '@quincarter/my-card-test/CoreMyCardTestCard';
  * ```
  *
  * ## Core Usage Example
  * ### Core Interface
  * ```typescript
  * import { LitElement } from 'lit';
- * import { IMyCardTestCard } from '@quincarter/my-card-test/CoreMyCardTest';
+ * import { IMyCardTestCard } from '@quincarter/my-card-test/CoreMyCardTestCard';
  *
  * export class FooBar extends LitElement implements IMyCardTestCard {
  * // TODO: Implement Interface definition
@@ -62,7 +62,7 @@ import { IMyCardTestCard } from '../core/MyCardTest.interface';
  * ### Core Styles
  * ```typescript
  * import { LitElement } from 'lit';
- * import { MyCardTestCardStyles } from '@quincarter/my-card-test/CoreMyCardTest';
+ * import { MyCardTestCardStyles } from '@quincarter/my-card-test/CoreMyCardTestCard';
  *
  * export class BarFoo extends LitElement {
  *     static get styles(): CSSResult[] {

@@ -1,7 +1,7 @@
 # @quincarter/my-card-test
 
-## 0.0.3
+## 0.0.4
 
 ### Patch Changes
 
-- adding exports named properly for core and anything except a default generated component
+- Updated exports

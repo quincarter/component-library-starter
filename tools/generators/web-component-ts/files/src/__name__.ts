@@ -50,14 +50,14 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  * * Use this method if you need to use pieces of <%=fileName%>, but you don't need the entire web component.
  * ## Imports
  * ```typescript
- * import { I<%=className%><%=componentTypeClass%>,  <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ * import { I<%=className%><%=componentTypeClass%>,  <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%><%=componentTypeClass%>';
  * ```
  *
  * ## Core Usage Example
  * ### Core Interface
  * ```typescript
  * import { LitElement } from 'lit';
- * import { I<%=className%><%=componentTypeClass%> } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ * import { I<%=className%><%=componentTypeClass%> } from '@quincarter/<%=fileName%>/Core<%=className%><%=componentTypeClass%>';
  *
  * export class FooBar extends LitElement implements I<%=className%><%=componentTypeClass%> {
  * // TODO: Implement Interface definition
@@ -67,7 +67,7 @@ import { I<%=className%><%=componentTypeClass%> } from '../core/<%=className%>.i
  * ### Core Styles
  * ```typescript
  * import { LitElement } from 'lit';
- * import { <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%>';
+ * import { <%=className%><%=componentTypeClass%>Styles } from '@quincarter/<%=fileName%>/Core<%=className%><%=componentTypeClass%>';
  *
  * export class BarFoo extends LitElement {
  *     static get styles(): CSSResult[] {

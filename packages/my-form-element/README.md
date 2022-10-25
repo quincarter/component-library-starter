@@ -41,14 +41,14 @@ customElements.define('foo-my-tag-here-bar', MyFormElementButton);
 * Use this method if you need to use pieces of my-form-element, but you don't need the entire web component.
 ## Imports
 ```typescript
-import { IMyFormElementButton,  MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElement';
+import { IMyFormElementButton,  MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElementButton';
 ```
 
 ## Core Usage Example
 ### Core Interface
 ```typescript
 import { LitElement } from 'lit';
-import { IMyFormElementButton } from '@quincarter/my-form-element/CoreMyFormElement';
+import { IMyFormElementButton } from '@quincarter/my-form-element/CoreMyFormElementButton';
 
 export class FooBar extends LitElement implements IMyFormElementButton {
 // TODO: Implement Interface definition
@@ -58,7 +58,7 @@ export class FooBar extends LitElement implements IMyFormElementButton {
 ### Core Styles
 ```typescript
 import { LitElement } from 'lit';
-import { MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElement';
+import { MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElementButton';
 
 export class BarFoo extends LitElement {
     static get styles(): CSSResult[] {

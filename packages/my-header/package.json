@@ -1,6 +1,6 @@
 {
   "name": "@quincarter/my-header",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This is just an example  component ",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
       "require": "./lib/src/my-header.js",
       "types": "./lib/src/my-header.d.ts"
     },
-    "./CoreMyHeader": {
+    "./CoreMyHeaderComponent": {
       "import": "./lib/core/my-header.core.js",
       "require": "./lib/core/my-header.core.js",
       "types": "./lib/core/my-header.core.d.ts"
@@ -26,10 +26,10 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "MyHeader": [
+      "./MyHeader": [
         "./lib/src/my-header.d.ts"
       ],
-      "CoreMyHeader": [
+      "./CoreMyHeaderComponent": [
         "./lib/core/my-header.core.d.ts"
       ]
     }
