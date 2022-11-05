@@ -7,6 +7,8 @@ export const MyHeaderComponentStyles: CSSResult = css`
     --default-card-padding: 2rem;
     --background-primary: #fff;
     --font-color-primary: #000;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -18,17 +20,15 @@ export const MyHeaderComponentStyles: CSSResult = css`
   }
 
   * {
-    margin: 0;
-    padding: 0;
+    background-color: var(--background-primary);
+    padding-inline: 1rem;
+    color: var(--font-color-primary);
+    box-shadow: var(--test-box-shadow);
   }
 
   .header-container {
-    color: var(--font-color-primary);
-    box-shadow: var(--test-box-shadow);
-    background-color: var(--background-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
   }
 `;

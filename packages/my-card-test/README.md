@@ -72,9 +72,9 @@ export class BarFoo extends LitElement {
 
 ## Properties
 
-| Property          | Attribute            | Type     | Default               | Description                                 |
-|-------------------|----------------------|----------|-----------------------|---------------------------------------------|
-| `myCardTestTitle` | `my-card-test-title` | `string` | "my-card-test works!" | Determines the title value of the component |
+| Property          | Attribute            | Type                  | Default               | Description                                 |
+|-------------------|----------------------|-----------------------|-----------------------|---------------------------------------------|
+| `myCardTestTitle` | `my-card-test-title` | `string \| undefined` | "my-card-test works!" | Determines the title value of the component |
 
 ## Slots
 

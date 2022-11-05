@@ -108,6 +108,10 @@ export class MyHeaderComponent
       <slot name="header-start"></slot>
       <slot name="header-middle"></slot>
       <slot name="header-end"></slot>
-    </div> `;
+    </div>
+    <div class="container">
+      <slot></slot>
+    </div>
+    `;
   }
 }

@@ -23,11 +23,10 @@ function Template({ active, myLayoutTitle }) {
     <my-layout>
       <div slot="layout-header">
         <my-header>
-          <div slot="header-start">Start slot</div>
-          <div slot="header-middle">
-            <input type="search" />
+          <div class="my-title">
+            <h2>Some fancy title</h2>
+            <p>This is some metadata</p>
           </div>
-          <div slot="header-end">user stuff</div>
         </my-header>
       </div>
       <div class="mfe">
