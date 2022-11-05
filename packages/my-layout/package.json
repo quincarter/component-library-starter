@@ -1,24 +1,24 @@
 {
-  "name": "@quincarter/my-form-element",
-  "version": "0.1.4",
-  "description": "This is just an example  button ",
+  "name": "@quincarter/my-layout",
+  "version": "0.0.1",
+  "description": "This is just an example  component ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-form-element"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-layout"
   },
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./MyFormElementButton": {
-      "import": "./lib/src/my-form-element.js",
-      "require": "./lib/src/my-form-element.js",
-      "types": "./lib/src/my-form-element.d.ts"
+    "./MyLayout": {
+      "import": "./lib/src/my-layout.js",
+      "require": "./lib/src/my-layout.js",
+      "types": "./lib/src/my-layout.d.ts"
     },
-    "./CoreMyFormElementButton": {
-      "import": "./lib/core/my-form-element.core.js",
-      "require": "./lib/core/my-form-element.core.js",
-      "types": "./lib/core/my-form-element.core.d.ts"
+    "./CoreMyLayoutComponent": {
+      "import": "./lib/core/my-layout.core.js",
+      "require": "./lib/core/my-layout.core.js",
+      "types": "./lib/core/my-layout.core.d.ts"
     }
   },
   "typesVersions": {
@@ -26,11 +26,11 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "./MyFormElementButton": [
-        "./lib/src/my-form-element.d.ts"
+      "./MyLayout": [
+        "./lib/src/my-layout.d.ts"
       ],
-      "./CoreMyFormElementButton": [
-        "./lib/core/my-form-element.core.d.ts"
+      "./CoreMyLayoutComponent": [
+        "./lib/core/my-layout.core.d.ts"
       ]
     }
   },

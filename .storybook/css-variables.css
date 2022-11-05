@@ -9,3 +9,8 @@
 * {
   font-family: Optimist, serif;
 }
+
+body {
+  background-color: lightgrey;
+  margin-block: 0;
+}

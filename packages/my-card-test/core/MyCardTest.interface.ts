@@ -1,3 +1,3 @@
 export interface IMyCardTestCard {
-  myCardTestTitle: string;
+  myCardTestTitle: string | undefined;
 }

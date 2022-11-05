@@ -10,7 +10,15 @@ export default {
 };
 
 function Template({ active, myHeaderTitle }) {
-  return html` <my-header .myHeaderTitle="${myHeaderTitle}"></my-header> `;
+  return html`
+    <my-header>
+      <div slot="start">Start slot</div>
+      <div slot="middle">
+        <input type="search" />
+      </div>
+      <div slot="end">user stuff</div>
+    </my-header>
+  `;
 }
 
 export const MyHeader = Template.bind({});

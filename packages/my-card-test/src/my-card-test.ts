@@ -88,37 +88,21 @@ export class MyCardTestCard extends LitElement implements IMyCardTestCard {
    * @default my-card-test works!
    */
   @property({ type: String, attribute: 'my-card-test-title' })
-  myCardTestTitle: string;
+  myCardTestTitle: string | undefined;
 
   static get styles(): CSSResult[] {
     return [MyCardTestCardStyles];
   }
 
-  constructor() {
-    super();
-
-    this.myCardTestTitle = 'my-card-test works!';
-  }
-
   render(): HTMLTemplateResult {
     return html`
       <div class="card">
-        <div class="card-title">
-          <h1 class="my-card-test-test-color">${this.myCardTestTitle}</h1>
-        </div>
+        ${this.myCardTestTitle
+          ? html` <div class="card-title">
+              <h1 class="my-card-test-test-color">${this.myCardTestTitle}</h1>
+            </div>`
+          : ''}
         <div class="card-body">
-          <p>
-            Your component is located in <code>/packages/my-card-test</code> and
-            the component and styles are already separated into their own files.
-          </p>
-          <p>
-            This is just a test component generated using the component
-            generator
-          </p>
-          <p>
-            Edit the <code>my-card-test.ts</code> code or remove this code and
-            use it as your own.
-          </p>
           <slot name="card-slot"></slot>
         </div>
       </div>

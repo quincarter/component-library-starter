@@ -59,7 +59,7 @@
     "postbuild": "yarn docs:md",
     "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
     "test": "tsc && web-test-runner --coverage",
-    "tsc:watch": "tsc --watch",
+    "tsc:watch": "tsc --watch --preserveWatchOutput",
     "lint": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --check --ignore-path .eslintignore",
     "lint:fix": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
     "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore"

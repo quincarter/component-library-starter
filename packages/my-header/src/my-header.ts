@@ -104,20 +104,10 @@ export class MyHeaderComponent
 
   render(): HTMLTemplateResult {
     return html`
-      <h1 class="my-header-test-color">${this.myHeaderTitle}</h1>
-      <div>
-        <p>
-          Your component is located in <code>/packages/my-header</code> and the
-          component and styles are already separated into their own files.
-        </p>
-        <p>
-          This is just a test component generated using the component generator
-        </p>
-        <p>
-          Edit the <code>my-header.ts</code> code or remove this code and use it
-          as your own.
-        </p>
-      </div>
-    `;
+    <div class="header-container">
+      <slot name="header-start"></slot>
+      <slot name="header-middle"></slot>
+      <slot name="header-end"></slot>
+    </div> `;
   }
 }
