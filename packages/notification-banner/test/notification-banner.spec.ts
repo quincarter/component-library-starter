@@ -7,7 +7,11 @@ import '../index.js';
 describe('NotificationBannerComponent', () => {
   let element: NotificationBannerComponent;
   beforeEach(async () => {
-    element = await fixture(html`<notification-banner></notification-banner>`);
+    element = await fixture(
+      html`<notification-banner
+        notification-state="opened"
+      ></notification-banner>`
+    );
   });
 
   it('renders an h1', () => {

@@ -106,8 +106,14 @@ export class NotificationBannerComponent
   @property({ type: String, attribute: 'banner-title' })
   bannerTitle: string | undefined;
 
-  @state()
+  @property({ type: Boolean, attribute: 'use-storage' })
+  useStorage = false;
+
+  @property({ type: String, attribute: 'notification-state' })
   notificationState: string | null | undefined;
+
+  @property({ type: String, attribute: 'api-url' })
+  apiUrl = '';
 
   static get styles(): CSSResult[] {
     return [NotificationBannerComponentStyles];
@@ -115,8 +121,10 @@ export class NotificationBannerComponent
 
   connectedCallback(): void {
     super.connectedCallback();
-    this.getSessionStorageData();
-    this.getBannerDetails();
+    if (this.useStorage && this.apiUrl.length > 0) {
+      this.getSessionStorageData();
+      this.getBannerDetails();
+    }
   }
 
   async getSessionStorageData() {
@@ -127,7 +135,6 @@ export class NotificationBannerComponent
     this.notificationState = sessionStorage.getItem(SESSION_STORAGE_STATE_KEY);
     this.requestUpdate();
     await this.updateComplete;
-    console.log('dismissed', this.notificationState);
   }
 
   setSessionStorageData(value: NotificationState) {
@@ -135,9 +142,7 @@ export class NotificationBannerComponent
   }
 
   async getBannerDetails(): Promise<void> {
-    const content = await fetch(
-      'https://quincarter.github.io/poc-repo/test.json'
-    );
+    const content = await fetch(this.apiUrl);
 
     const existingContent = sessionStorage.getItem(SESSION_STORAGE_CONTENT_KEY);
 
@@ -145,7 +150,6 @@ export class NotificationBannerComponent
       const alert: TestJson = await content.json();
 
       if (JSON.stringify(alert) !== existingContent) {
-        console.log('setting session storage');
         sessionStorage.setItem(
           SESSION_STORAGE_CONTENT_KEY,
           JSON.stringify(alert)
