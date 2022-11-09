@@ -11,9 +11,8 @@ describe('MyHeaderComponent', () => {
   });
 
   it('renders an h1', () => {
-    const h1 = element?.shadowRoot?.querySelector('h1');
+    const h1 = element?.shadowRoot?.querySelector('.header-container');
     expect(h1).to.exist;
-    expect(h1?.textContent).to.contain('my-header');
   });
 
   it('passes the a11y audit', async () => {

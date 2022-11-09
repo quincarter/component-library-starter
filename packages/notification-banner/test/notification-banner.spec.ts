@@ -1,17 +1,17 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import { MyLayoutComponent } from '../src/my-layout';
+import { NotificationBannerComponent } from '../src/notification-banner';
 import '../index.js';
 
-describe('MyLayoutComponent', () => {
-  let element: MyLayoutComponent;
+describe('NotificationBannerComponent', () => {
+  let element: NotificationBannerComponent;
   beforeEach(async () => {
-    element = await fixture(html`<my-layout></my-layout>`);
+    element = await fixture(html`<notification-banner></notification-banner>`);
   });
 
   it('renders an h1', () => {
-    const h1 = element?.shadowRoot?.querySelector('.container');
+    const h1 = element?.shadowRoot?.querySelector('.banner');
     expect(h1).to.exist;
   });
 
