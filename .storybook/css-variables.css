@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 :root {
   --box-shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --clip-path--ellipse: ellipse(40% 49% at 50% 50%);
@@ -13,4 +15,9 @@
 body {
   background-color: lightgrey;
   margin-block: 0;
+}
+
+.sb-show-main.sb-main-padded {
+  margin: 0;
+  padding: 0;
 }

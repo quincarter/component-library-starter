@@ -1,24 +1,24 @@
 {
-  "name": "@quincarter/my-header",
-  "version": "0.1.3",
+  "name": "@quincarter/my-side-nav",
+  "version": "0.0.1",
   "description": "This is just an example  component ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-header"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/my-side-nav"
   },
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./MyHeader": {
-      "import": "./lib/src/my-header.js",
-      "require": "./lib/src/my-header.js",
-      "types": "./lib/src/my-header.d.ts"
+    "./MySideNav": {
+      "import": "./lib/src/my-side-nav.js",
+      "require": "./lib/src/my-side-nav.js",
+      "types": "./lib/src/my-side-nav.d.ts"
     },
-    "./CoreMyHeaderComponent": {
-      "import": "./lib/core/my-header.core.js",
-      "require": "./lib/core/my-header.core.js",
-      "types": "./lib/core/my-header.core.d.ts"
+    "./CoreMySideNavComponent": {
+      "import": "./lib/core/my-side-nav.core.js",
+      "require": "./lib/core/my-side-nav.core.js",
+      "types": "./lib/core/my-side-nav.core.d.ts"
     }
   },
   "typesVersions": {
@@ -26,11 +26,11 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "./MyHeader": [
-        "./lib/src/my-header.d.ts"
+      "./MySideNav": [
+        "./lib/src/my-side-nav.d.ts"
       ],
-      "./CoreMyHeaderComponent": [
-        "./lib/core/my-header.core.d.ts"
+      "./CoreMySideNavComponent": [
+        "./lib/core/my-side-nav.core.d.ts"
       ]
     }
   },
@@ -54,8 +54,7 @@
     "tsc:watch": "tsc --watch --preserveWatchOutput",
     "lint": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --check --ignore-path .eslintignore",
     "lint:fix": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
-    "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore",
-    "publish:local": "yarn changeset publish --publishConfig=http://localhost:4873"
+    "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore"
   },
   "dependencies": {
     "lit": "2.x"

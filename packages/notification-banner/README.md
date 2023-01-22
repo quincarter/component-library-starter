@@ -75,9 +75,11 @@ export class BarFoo extends LitElement {
 
 | Property            | Attribute            | Type                          | Default     | Description                                 |
 |---------------------|----------------------|-------------------------------|-------------|---------------------------------------------|
+| `apiUrl`            | `api-url`            | `string`                      | ""          |                                             |
 | `bannerDescription` | `banner-description` | `string \| undefined`         | "undefined" | Description of the alert message            |
 | `bannerTitle`       | `banner-title`       | `string \| undefined`         | "undefined" | Determines the title value of the component |
-| `notificationState` |                      | `string \| null \| undefined` |             |                                             |
+| `notificationState` | `notification-state` | `string \| null \| undefined` |             |                                             |
+| `useStorage`        | `use-storage`        | `boolean`                     | false       |                                             |
 
 ## Methods
 

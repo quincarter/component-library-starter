@@ -13,7 +13,7 @@
     "docs:md": "nx run-many --target=docs:md",
     "publish:local": "nx run-many --target=publish:local",
     "build": "npm-run-all --sequential rimraf-dist && nx run-many --target=build",
-    "tsc:watch": "nx run-many --target=tsc:watch --parallel 5",
+    "tsc:watch": "nx run-many --target=tsc:watch --parallel 10",
     "changeset:add": "changeset && changeset version",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook",
