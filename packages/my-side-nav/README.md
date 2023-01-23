@@ -34,7 +34,8 @@ customElements.define('foo-my-tag-here-bar', MySideNav);
 
 ## WC Usage Example
 ```html
-<my-side-nav my-my-side-nav-title="testing this attribute works">
+<my-side-nav .navLinks="[{name: 'Some Name', link: 'someLink/path/to/page', logo: 'fa-dashboard'}]">
+  <div>Put your content here - this is a default slot that will render the content on the page for you</div>
 </my-side-nav>
 ```
 
@@ -79,6 +80,6 @@ export class BarFoo extends LitElement {
 
 ## Methods
 
-| Method               | Type                                   |
-|----------------------|----------------------------------------|
-| `renderSideNavLinks` | `(): TemplateResult<1>[] \| undefined` |
+| Method               | Type                                   | Description                                      |
+|----------------------|----------------------------------------|--------------------------------------------------|
+| `renderSideNavLinks` | `(): TemplateResult<1>[] \| undefined` | Renders the side nav links passed into the .navLinks object |
