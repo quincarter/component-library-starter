@@ -9,7 +9,7 @@ import {
 import { property } from 'lit/decorators.js';
 import { MySideNavComponentStyles } from '../core/my-side-nav.styles';
 import { FontAwesome } from '../core/icons/icons.styles';
-import { IMySideNavComponent } from '../core/MySideNav.interface';
+import { IMySideNavComponent, NavLinks } from '../core/MySideNav.interface';
 
 /**
  * This is a short description of your component. Change me in [./src/my-side-nav.ts](./src/my-side-nav.ts#L6-42) in the JSDoc above the Component Class.
@@ -93,21 +93,30 @@ export class MySideNavComponent
   implements IMySideNavComponent
 {
   /**
-   * Determines the title value of the component
-   * @attr my-side-nav-title
-   * @default my-side-nav works!
+   * List of links and their children for the side navigation
+   * @attr nav-links
+   * @example
+   * [{
+   *   name: 'Test Name',
+   *   link: 'https://foo.bar',
+   *   icon: 'fa-dashboard'
+   * }, {
+   *   name: 'Test with children',
+   *   link: 'https://foo.bar.children',
+   *   icon: 'fa-home',
+   *   children: [{
+   *     name: 'first child',
+   *     link: 'https://foo.bar.firstChild',
+   *     icon: 'fa-edit'
+   *   }]
+   * }]
+   *
    */
-  @property({ type: String, attribute: 'my-side-nav-title' })
-  mySideNavTitle: string;
+  @property({ type: Array, attribute: 'nav-links' })
+  navLinks: NavLinks[] | undefined;
 
   static get styles(): CSSResult[] {
     return [MySideNavComponentStyles, FontAwesome];
-  }
-
-  constructor() {
-    super();
-
-    this.mySideNavTitle = 'my-side-nav works!';
   }
 
   protected firstUpdated(
@@ -127,6 +136,42 @@ export class MySideNavComponent
       });
   }
 
+  renderSideNavLinks() {
+    return this.navLinks?.map(
+      (navItem: NavLinks) => html`
+        <li class="${navItem?.children?.length ? 'menu-hasdropdown' : ''}">
+          <a href="${navItem.link}">${navItem.name}</a
+          ><span class="icon"><i class="fa ${navItem.icon}"></i></span>
+
+          ${navItem.children?.length
+            ? html`
+                <label
+                  title="toggle menu"
+                  for="id-${navItem.name.replace(/\s/g, '')}"
+                >
+                  <span class="downarrow"
+                    ><i class="fa fa-caret-down"></i
+                  ></span>
+                </label>
+                <input
+                  type="checkbox"
+                  class="sub-menu-checkbox"
+                  id="id-${navItem.name.replace(/\s/g, '')}"
+                />
+
+                <ul class="sub-menu-dropdown">
+                  ${navItem?.children?.map(
+                    child =>
+                      html`<li><a href="${child.link}">${child.name}</a></li>`
+                  )}
+                </ul>
+              `
+            : html``}
+        </li>
+      `
+    );
+  }
+
   render(): HTMLTemplateResult {
     return html`
       <div class="container">
@@ -140,7 +185,7 @@ export class MySideNavComponent
 
             <div class="overflow-container">
               <ul class="menu-dropdown">
-                <li>
+                <!-- <li>
                   <a href="#">Architecture Portal</a
                   ><span class="icon"><i class="fa fa-dashboard"></i></span>
                 </li>
@@ -175,7 +220,8 @@ export class MySideNavComponent
                 <li>
                   <a href="#">Reviews</a
                   ><span class="icon"><i class="fa fa-envelope"></i></span>
-                </li>
+                </li> -->
+                ${this.renderSideNavLinks()}
               </ul>
             </div>
           </nav>
@@ -184,8 +230,7 @@ export class MySideNavComponent
         <div class="content-wrapper">
           <div id="main">
             <div id="main-contents">
-              <h1>Some Title Here</h1>
-              <p>This is some content inside</p>
+              <slot></slot>
             </div>
           </div>
         </div>

@@ -73,6 +73,12 @@ export class BarFoo extends LitElement {
 
 ## Properties
 
-| Property         | Attribute           | Type     | Default              | Description                                 |
-|------------------|---------------------|----------|----------------------|---------------------------------------------|
-| `mySideNavTitle` | `my-side-nav-title` | `string` | "my-side-nav works!" | Determines the title value of the component |
+| Property   | Attribute   | Type                      | Description                                      |
+|------------|-------------|---------------------------|--------------------------------------------------|
+| `navLinks` | `nav-links` | `NavLinks[] \| undefined` | List of links and their children for the side navigation |
+
+## Methods
+
+| Method               | Type                                   |
+|----------------------|----------------------------------------|
+| `renderSideNavLinks` | `(): TemplateResult<1>[] \| undefined` |

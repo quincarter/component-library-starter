@@ -1,3 +1,10 @@
 export interface IMySideNavComponent {
-  mySideNavTitle: string;
+  navLinks: NavLinks[] | undefined;
+}
+
+export interface NavLinks {
+  name: string;
+  link: string;
+  icon?: string;
+  children?: NavLinks[];
 }

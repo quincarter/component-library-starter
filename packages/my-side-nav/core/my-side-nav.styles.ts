@@ -22,9 +22,9 @@ export const MySideNavComponentStyles: CSSResult = css`
   }
 
   #main {
-    padding: 4% 1.5em;
+    padding-inline: 4rem;
     max-width: 55em;
-    margin: 0 auto;
+    margin-block: 6rem;
   }
 
   #header {
@@ -178,8 +178,8 @@ export const MySideNavComponentStyles: CSSResult = css`
 
   .sub-menu-checkbox:checked + ul.sub-menu-dropdown {
     display: block !important;
-    -webkit-animation: grow 0.45s cubic-bezier(0.77, 0, 0.175, 1);
-    animation: grow 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-animation: grow 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: grow 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   .openNav .content-wrapper {
