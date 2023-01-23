@@ -46,7 +46,8 @@ import { IMySideNavComponent, NavLinks } from '../core/MySideNav.interface';
  *
  * ## WC Usage Example
  * ```html
- * <my-side-nav my-my-side-nav-title="testing this attribute works">
+ * <my-side-nav .navLinks="[{name: 'Some Name', link: 'someLink/path/to/page', logo: 'fa-dashboard'}]">
+ *   <div>Put your content here - this is a default slot that will render the content on the page for you</div>
  * </my-side-nav>
  * ```
  *
@@ -136,6 +137,10 @@ export class MySideNavComponent
       });
   }
 
+  /**
+   * Renders the side nav links passed into the .navLinks object
+   * @returns A list of links and their properties in a TemplateResult
+   */
   renderSideNavLinks() {
     return this.navLinks?.map(
       (navItem: NavLinks) => html`
