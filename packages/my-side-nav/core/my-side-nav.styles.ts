@@ -23,7 +23,6 @@ export const MySideNavComponentStyles: CSSResult = css`
 
   #main {
     padding-inline: 4rem;
-    max-width: 55em;
     margin-block: 6rem;
   }
 
@@ -573,6 +572,32 @@ export const MySideNavComponentStyles: CSSResult = css`
   }
 
   /* Large Screen Typography  - Scale: 1.414 Augmented Fourth (thanks http://type-scale.com/)  */
+
+  @media screen and (max-width: 550px) {
+    #main {
+      position: relative;
+      padding-inline: 1rem;
+    }
+
+    #main-contents {
+      position: absolute;
+      width: -webkit-fill-available;
+      left: -2.25rem;
+      padding-inline: 1rem;
+    }
+
+    .menu {
+      left: -250px;
+    }
+
+    .openNav .menu {
+      transform: translate3d(250px, 0px, 0px);
+    }
+
+    .openNav .menu:hover {
+      left: -250px;
+    }
+  }
 
   @media screen and (min-width: 72em) {
     h1 {
