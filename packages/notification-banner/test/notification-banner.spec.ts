@@ -10,7 +10,7 @@ describe('NotificationBannerComponent', () => {
     element = await fixture(
       html`<notification-banner
         notification-state="opened"
-      ></notification-banner>`
+      ></notification-banner>`,
     );
   });
 

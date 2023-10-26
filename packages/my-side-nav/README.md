@@ -35,7 +35,7 @@ customElements.define('foo-my-tag-here-bar', MySideNav);
 ## WC Usage Example
 ```html
 <my-side-nav .navLinks="[{name: 'Some Name', link: 'someLink/path/to/page', logo: 'fa-dashboard'}]">
-  <div>Put your content here - this is a default slot that will render the content on the page for you</div>
+   <div>Put your content here - this is a default slot that will render the content on the page for you</div>
 </my-side-nav>
 ```
 
@@ -63,12 +63,12 @@ import { LitElement } from 'lit';
 import { MySideNavComponentStyles } from '@quincarter/my-side-nav/CoreMySideNavComponent';
 
 export class BarFoo extends LitElement {
-    static get styles(): CSSResult[] {
-        return [
-            MySideNavComponentStyles,
-            css`/* my css here /*`
-        ];
-    }
+     static get styles(): CSSResult[] {
+         return [
+             MySideNavComponentStyles,
+             css`/* my css here /*`
+         ];
+     }
 }
 ```
 

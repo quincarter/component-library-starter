@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "lit-svg": {
+      "implementation": "./src/generators/lit-svg",
+      "schema": "./src/generators/lit-svg/schema.json",
+      "description": "Generator lit-svg"
+    },
+    "web-component-ts": {
+      "implementation": "./src/generators/web-component-ts",
+      "schema": "./src/generators/web-component-ts/schema.json",
+      "description": "Generator web-component-ts"
+    }
+  }
+}

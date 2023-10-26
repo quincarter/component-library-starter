@@ -38,7 +38,6 @@
     "README.md",
     "lib/core",
     "lib/src",
-    "lib/wc",
     "lib/index.*",
     "lib/tsconfig.tsbuildinfo"
   ],

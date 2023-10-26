@@ -152,7 +152,7 @@ export class NotificationBannerComponent
       if (JSON.stringify(alert) !== existingContent) {
         sessionStorage.setItem(
           SESSION_STORAGE_CONTENT_KEY,
-          JSON.stringify(alert)
+          JSON.stringify(alert),
         );
         sessionStorage.setItem(SESSION_STORAGE_STATE_KEY, 'opened');
       }

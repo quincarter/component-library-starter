@@ -121,7 +121,7 @@ export class MySideNavComponent
   }
 
   protected firstUpdated(
-    _changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
+    _changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>,
   ): void {
     super.firstUpdated(_changedProperties);
     this.shadowRoot
@@ -167,13 +167,13 @@ export class MySideNavComponent
                 <ul class="sub-menu-dropdown">
                   ${navItem?.children?.map(
                     child =>
-                      html`<li><a href="${child.link}">${child.name}</a></li>`
+                      html`<li><a href="${child.link}">${child.name}</a></li>`,
                   )}
                 </ul>
               `
             : html``}
         </li>
-      `
+      `,
     );
   }
 
