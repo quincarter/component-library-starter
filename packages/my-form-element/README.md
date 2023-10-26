@@ -24,7 +24,7 @@ import '@quincarter/my-form-element';
 ```
 * If you need to rename the element for some reason, you can do this:
 ```javascript
- import { MyFormElementButton } from '@quincarter/my-form-element/MyFormElementButton';
+  import { MyFormElementButton } from '@quincarter/my-form-element/MyFormElementButton';
 
 // then define the component yourself with a custom tag name
 customElements.define('foo-my-tag-here-bar', MyFormElementButton);
@@ -61,12 +61,12 @@ import { LitElement } from 'lit';
 import { MyFormElementButtonStyles } from '@quincarter/my-form-element/CoreMyFormElementButton';
 
 export class BarFoo extends LitElement {
-    static get styles(): CSSResult[] {
-        return [
-            MyFormElementButtonStyles,
-            css`/* my css here /*`
-        ];
-    }
+     static get styles(): CSSResult[] {
+         return [
+             MyFormElementButtonStyles,
+             css`/* my css here /*`
+         ];
+     }
 }
 ```
 

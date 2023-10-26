@@ -62,12 +62,12 @@ import { LitElement } from 'lit';
 import { NotificationBannerComponentStyles } from '@quincarter/notification-banner/CoreNotificationBannerComponent';
 
 export class BarFoo extends LitElement {
-    static get styles(): CSSResult[] {
-        return [
-            NotificationBannerComponentStyles,
-            css`/* my css here /*`
-        ];
-    }
+     static get styles(): CSSResult[] {
+         return [
+             NotificationBannerComponentStyles,
+             css`/* my css here /*`
+         ];
+     }
 }
 ```
 

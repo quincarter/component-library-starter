@@ -1,5 +1,5 @@
 {
-  "name": "@quincarter/notification-banner",
+  "name": "@quincarter/my-notification-banner",
   "version": "0.0.1",
   "description": "This is just an example  component ",
   "license": "MIT",
@@ -38,7 +38,6 @@
     "README.md",
     "lib/core",
     "lib/src",
-    "lib/wc",
     "lib/index.*",
     "lib/tsconfig.tsbuildinfo"
   ],

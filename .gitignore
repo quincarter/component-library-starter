@@ -27,5 +27,8 @@ packages/**/lib
 packages/**/coverage
 /lib/
 
+# nx
+.nx
+
 storybook-static
 custom-elements.json

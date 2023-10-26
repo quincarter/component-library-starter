@@ -24,7 +24,7 @@ import '@quincarter/my-card-test';
 ```
 * If you need to rename the element for some reason, you can do this:
 ```javascript
- import { MyCardTestCard } from '@quincarter/my-card-test/MyCardTestCard';
+  import { MyCardTestCard } from '@quincarter/my-card-test/MyCardTestCard';
 
 // then define the component yourself with a custom tag name
 customElements.define('foo-my-tag-here-bar', MyCardTestCard);
@@ -61,12 +61,12 @@ import { LitElement } from 'lit';
 import { MyCardTestCardStyles } from '@quincarter/my-card-test/CoreMyCardTestCard';
 
 export class BarFoo extends LitElement {
-    static get styles(): CSSResult[] {
-        return [
-            MyCardTestCardStyles,
-            css`/* my css here /*`
-        ];
-    }
+     static get styles(): CSSResult[] {
+         return [
+             MyCardTestCardStyles,
+             css`/* my css here /*`
+         ];
+     }
 }
 ```
 

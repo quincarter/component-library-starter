@@ -1,16 +1,31 @@
 {
-  "extends": "nx/presets/npm.json",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "test", "format", "lint", "lint:fix"],
-        "accessToken": "ZGJiOTNiYmQtNGY2Yy00NjAyLTlhOTgtMjcxYWFiNzI5YjI2fHJlYWQtd3JpdGU="
-      }
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
     }
   },
-  "targetDefaults": {},
+  "extends": "nx/presets/npm.json",
+  "targetDefaults": {
+    "test": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "cache": true
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "cache": true
+    },
+    "build": {
+      "cache": true
+    },
+    "format": {
+      "cache": true
+    },
+    "lint:fix": {
+      "cache": true
+    }
+  },
   "affected": {
     "defaultBase": "main"
-  }
+  },
+  "nxCloudAccessToken": "ZGJiOTNiYmQtNGY2Yy00NjAyLTlhOTgtMjcxYWFiNzI5YjI2fHJlYWQtd3JpdGU="
 }

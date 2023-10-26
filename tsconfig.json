@@ -20,7 +20,10 @@
     "outDir": "lib",
     "inlineSources": true,
     "rootDir": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp", "tools", ".history"]
 }

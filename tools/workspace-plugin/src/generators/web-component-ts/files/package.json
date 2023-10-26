@@ -1,0 +1,61 @@
+{
+  "name": "@quincarter/<%=fileName%>",
+  "version": "0.0.1",
+  "description": "This is just an example <% if (componentType) { %> <%=componentType%> <% } else { %> component <% } %>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./<%=className%><%=componentTypeClass%>": {
+      "import": "./lib/src/<%=fileName%>.js",
+      "require": "./lib/src/<%=fileName%>.js",
+      "types": "./lib/src/<%=fileName%>.d.ts"
+    },
+    "./Core<%=className%><%=componentTypeClass%>": {
+      "import": "./lib/core/<%=fileName%>.core.js",
+      "require": "./lib/core/<%=fileName%>.core.js",
+      "types": "./lib/core/<%=fileName%>.core.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./lib/index.d.ts"
+      ],
+      "./<%=className%><%=componentTypeClass%>": [
+        "./lib/src/<%=fileName%>.d.ts"
+      ],
+      "./Core<%=className%><%=componentTypeClass%>": [
+        "./lib/core/<%=fileName%>.core.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "README.md",
+    "lib/core",
+    "lib/src",
+    "lib/index.*",
+    "lib/tsconfig.tsbuildinfo"
+  ],
+  "private": false,
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "yarn docs:md",
+    "docs:md": "wca analyze ./src/*.ts --format markdown --outFile README.md",
+    "test": "tsc && web-test-runner --coverage",
+    "tsc:watch": "tsc --watch --preserveWatchOutput",
+    "lint": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --check --ignore-path .eslintignore",
+    "lint:fix": "eslint --ext .ts,.html --ignore-path .eslintignore && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
+    "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore"
+  },
+  "dependencies": {
+    "lit": "^2.7.x || ^3.0.0"
+  }
+}
