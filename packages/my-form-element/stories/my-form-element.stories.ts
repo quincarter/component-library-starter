@@ -2,7 +2,7 @@ import { html } from 'lit';
 import '../lib/index.js';
 
 export default {
-  title: 'New/Buttons',
+  title: 'New/Buttons/MyFormElement',
   component: 'my-form-element',
   argTypes: {
     myFormElementTitle: { control: 'text' },

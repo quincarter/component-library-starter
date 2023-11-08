@@ -3,7 +3,7 @@ import '../lib/index.js';
 import '@quincarter/my-card-test';
 
 export default {
-  title: 'New/Components',
+  title: 'New/Components/MySideNav',
   component: 'my-side-nav',
 };
 
@@ -44,23 +44,23 @@ export const MySideNav = Template.bind({});
 MySideNav.args = {
   navLinks: [
     {
-      name: 'Architecture',
-      link: 'systesms',
+      name: 'Test Link',
+      link: 'blah',
       icon: 'fa-dashboard',
     },
     {
-      name: 'My Systems',
-      link: 'mysystems',
+      name: 'My Test',
+      link: 'mytest',
       icon: 'fa-home',
       children: [
         {
-          name: 'Onboarding',
-          link: 'onboarding',
+          name: 'Docs',
+          link: 'docs',
           icon: 'fa-person',
         },
         {
-          name: 'Release',
-          link: 'release',
+          name: 'Profile',
+          link: 'profile',
           icon: 'fa-book',
         },
       ],

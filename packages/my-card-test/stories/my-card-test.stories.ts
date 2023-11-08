@@ -2,7 +2,7 @@ import { html } from 'lit';
 import '../lib/index.js';
 
 export default {
-  title: 'New/Cards',
+  title: 'New/Cards/MyCardTest',
   component: 'my-card-test',
   argTypes: {
     myCardTestTitle: { control: 'text' },

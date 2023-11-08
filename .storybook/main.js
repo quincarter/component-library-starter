@@ -1,9 +1,11 @@
 import { dirname, join } from 'path';
 module.exports = {
   stories: ['../packages/**/stories/*.stories.@(js|jsx|ts|tsx|mdx)'],
+
   addons: [
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-mdx-gfm'),
     getAbsolutePath('@storybook/addon-mdx-gfm'),
   ],
 
@@ -14,9 +16,6 @@ module.exports = {
 
   docs: {
     autodocs: true,
-  },
-  core: {
-    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
   },
 };
 

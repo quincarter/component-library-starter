@@ -1,9 +1,10 @@
-import { html } from 'lit';
+import { TemplateResult, html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { NotificationState } from '../core/notification-banner.core';
 import '../lib/index.js';
 
 export default {
-  title: 'New/Components',
+  title: 'New/Components/NotificationBanner',
   component: 'notification-banner',
   argTypes: {
     bannerTitle: { control: 'text', name: 'banner-title' },
@@ -26,25 +27,37 @@ export default {
   },
 };
 
-function Template({
+interface Story<T> {
+  (args: T): TemplateResult;
+  args?: Partial<T>;
+  argTypes?: Record<string, unknown>;
+}
+
+interface ArgTypes {
+  bannerDescription: string;
+  bannerTitle: string;
+  notificationState: NotificationState;
+  useStorage: boolean;
+  apiUrl: string;
+}
+
+const NotificationBannerTemplate: Story<ArgTypes> = ({
   bannerDescription,
   bannerTitle,
   notificationState,
   useStorage,
   apiUrl,
-}) {
-  return html`
-    <notification-banner
-      banner-title="${bannerTitle}"
-      banner-description="${bannerDescription}"
-      notification-state="${ifDefined(notificationState)}"
-      api-url="${apiUrl}"
-      ?use-storage="${useStorage}"
-    ></notification-banner>
-  `;
-}
+}) => html`
+  <notification-banner
+    banner-title="${bannerTitle}"
+    banner-description="${bannerDescription}"
+    notification-state="${ifDefined(notificationState)}"
+    api-url="${apiUrl}"
+    ?use-storage="${useStorage}"
+  ></notification-banner>
+`;
 
-export const NotificationBanner = Template.bind({});
+export const NotificationBanner = NotificationBannerTemplate.bind({});
 NotificationBanner.args = {
   bannerTitle: 'notification-banner works!',
   bannerDescription: 'this description works',
