@@ -22,10 +22,25 @@
     },
     "lint:fix": {
       "cache": true
+    },
+    "@nx/jest:jest": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "@nx/eslint:lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "cache": true
     }
   },
-  "affected": {
-    "defaultBase": "main"
-  },
-  "nxCloudAccessToken": "ZGJiOTNiYmQtNGY2Yy00NjAyLTlhOTgtMjcxYWFiNzI5YjI2fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZGJiOTNiYmQtNGY2Yy00NjAyLTlhOTgtMjcxYWFiNzI5YjI2fHJlYWQtd3JpdGU=",
+  "defaultBase": "main"
 }

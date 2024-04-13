@@ -41,7 +41,6 @@
     "lib/index.*",
     "lib/tsconfig.tsbuildinfo"
   ],
-  "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
