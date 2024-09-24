@@ -2,6 +2,26 @@
 
 ## This Repo utilizes [Nx](https://nx.dev) for package management and [Lit Element](https://lit.dev) + [open-wc standards](https://github.com/open-wc) for scalable, small, lightweight web component development
 
+### Who is this for?
+If you are someone looking to build out some kind of component library with Lit components, this should help you get started. A lot of the setup work has been done for you here, but you can choose to use this, or modify it as needed. I tried to follow similar patterns I have seen across multiple component libraries when I put this together.
+
+### What's included
+- Lit :lit: for authoring components (of course)
+- Storybook for prototyping/testing/sandboxing your components
+- :typescript: is key here, But ships JS and TS assets when compiled with `tsc`. 
+- Web Test Runner for unit testing
+- Nx - if you have never used Nx before, it is a Monorepo management tool.
+- Changesets for publishing and managing versioning of nested packages in a monorepo
+- Markdown doc generation with the web-component-analyzer and JSDoc Parsing
+- Nx Generator for generating a base component to start off that is tested and storybook-ready for development
+
+### What else?
+
+- Packages are pre-configured for publishing to an internal company registry, or to npm. 
+- Published Files are pre-configured and pretty fleshed out to only publish the assets you need, but that can be adjusted as needed. 
+- Tooling is pretty fleshed out as well with some nice linter rules and quality of life adjustments, but that can also be adjusted as needed.
+- This project uses `yarn` but you can use `npm`, at the time when i built this, npm didn't have a good handle on workspaces like `yarn` did and i still enjoy yarn over npm.
+
 ### Developing components
 
 Run this to start and install dependencies:
