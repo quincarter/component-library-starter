@@ -1,6 +1,6 @@
-## This Repo utilizes [Nx](https://nx.dev) for package management and [open-wc](https://github.com/open-wc) for web components
+# Component Library Starter
 
-## This project uses [open-wc](https://github.com/open-wc) for scalable, small, lightweight web component development
+## This Repo utilizes [Nx](https://nx.dev) for package management and [Lit Element](https://lit.dev) + [open-wc standards](https://github.com/open-wc) for scalable, small, lightweight web component development
 
 ### Developing components
 
