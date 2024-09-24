@@ -31,7 +31,7 @@ yarn new-component:ts
 yarn new-component:ts my-component-name
 ```
 
-**[postnew-component:ts](./package.json#L20) script will run after component is successfully created, adding it to all of the cached operations.**
+**[postnew-component:ts](./package.json#L22) script will run after component is successfully created, adding it to all of the cached operations.**
 
 ## Storybook/Development
 
@@ -111,11 +111,27 @@ All scripts must start with a run command like this:
 yarn <script name>
 ```
 
-- To add your nested package script to a Cacheable item, you would add your script name to the `CacheableOperations` array in the [nx.json](./nx.json#L7);
+- To add your nested package script to a Cacheable item, you would add your script name to the `targetDefaults` Object in the [nx.json](./nx.json#L8);
 
 ```json
-{
-  "cacheableOperations": ["build", "test", "format", "lint", "lint:fix"]
+"targetDefaults": {
+    "test": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "cache": true
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "cache": true
+    },
+    "build": {
+      "cache": true
+    },
+    "format": {
+      "cache": true
+    },
+    "lint:fix": {
+      "cache": true
+    },
 }
 ```
 
@@ -155,4 +171,4 @@ Tooling for this project should be fairly straightforward. Most users can get go
 - [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) - Great for executing workspace commands. This project is setup to simplify these commands with built in `package.json` scripts. If you want this, use it at your own risk.
 - [Ayu Mirage Color Scheme](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) - An easy on the eyes color scheme for VS Code that makes code much more pleasant to look at.
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - Colorful icons that give your VS Code some character
-- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) - Colorizes your VSCode windows. Great for those of us that have 15 windows open at a time. Assign a color and recognize that code window immediately. 
+- [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) - Colorizes your VSCode windows. Great for those of us that have 15 windows open at a time. Assign a color and recognize that code window immediately.
