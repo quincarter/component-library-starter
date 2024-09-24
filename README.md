@@ -3,22 +3,26 @@
 ## This Repo utilizes [Nx](https://nx.dev) for package management and [Lit Element](https://lit.dev) + [open-wc standards](https://github.com/open-wc) for scalable, small, lightweight web component development
 
 ### Who is this for?
+
 If you are someone looking to build out some kind of component library with Lit components, this should help you get started. A lot of the setup work has been done for you here, but you can choose to use this, or modify it as needed. I tried to follow similar patterns I have seen across multiple component libraries when I put this together.
 
 ### What's included
+
 - Lit for authoring components
 - Storybook for prototyping/testing/sandboxing your components
-- TypeScript is key here, But ships JS and TS assets when compiled with `tsc`. 
+- TypeScript is key here, But ships JS and TS assets when compiled with `tsc`.
 - Web Test Runner for unit testing
 - Nx - if you have never used Nx before, it is a Monorepo management tool.
 - Changesets for publishing and managing versioning of nested packages in a monorepo
 - Markdown doc generation with the web-component-analyzer and JSDoc Parsing
 - Nx Generator for generating a base component to start off that is tested and storybook-ready for development
+- [Verdaccio](https://verdaccio.org/) Registry Docker container for local package publishing and testing
+  - Accessible via `yarn verdaccio`
 
 ### What else?
 
-- Packages are pre-configured for publishing to an internal company registry, or to npm. 
-- Published Files are pre-configured and pretty fleshed out to only publish the assets you need, but that can be adjusted as needed. 
+- Packages are pre-configured for publishing to an internal company registry, or to npm.
+- Published Files are pre-configured and pretty fleshed out to only publish the assets you need, but that can be adjusted as needed.
 - Tooling is pretty fleshed out as well with some nice linter rules and quality of life adjustments, but that can also be adjusted as needed.
 - This project uses `yarn` but you can use `npm`, at the time when i built this, npm didn't have a good handle on workspaces like `yarn` did and i still enjoy yarn over npm.
 
@@ -173,6 +177,18 @@ You can also just run `yarn` and it will ask you which script you would like to 
 # Tooling and Extensions
 
 Tooling for this project should be fairly straightforward. Most users can get going quickly. If you are using VS Code, you can install a few of these Extensions and it may make your life easier working with [Nx](https://nx.dev) and [Lit Element](https://lit.dev).
+
+## Verdaccio
+
+Verdaccio is a lightweight private npm proxy registry built in Node.js
+
+Using a private npm registry like Verdaccio is one of the Top 10 NPM Security Best Practices recommended by the Open Web Application Security Project (OWASP).
+
+Locally there is a file created based on their example file. [verdaccio-config.yaml](./verdaccio-config.yaml). This will get copied into an ignored directory where the verdaccio container mountpoints are referencing. Without this file, the container will not run. If you accidentally delete this file, it can be redownloaded/copied [here](https://github.com/verdaccio/verdaccio/blob/5.x/conf/docker.yaml)
+
+```bash
+yarn verdaccio
+```
 
 ## VS Code Extensions
 

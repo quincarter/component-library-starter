@@ -25,7 +25,9 @@
     "analyze": "cem analyze --litelement",
     "start": "yarn build && concurrently -k -r \"yarn tsc:watch\" \"sb dev -p 6006\"",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "verdaccio:init": "mkdir -p ./.verdaccio/config ./.verdaccio/plugins ./.verdaccio/storage && cp ./verdaccio-config.yaml ./.verdaccio/config/config.yaml",
+    "verdaccio": "yarn verdaccio:init && docker compose up -d"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.8",

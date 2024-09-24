@@ -27,6 +27,9 @@ packages/**/lib
 packages/**/coverage
 /lib/
 
+# Verdaccio
+.verdaccio
+
 # nx
 .nx
 
