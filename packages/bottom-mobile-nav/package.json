@@ -1,24 +1,24 @@
 {
-  "name": "@quincarter/<%=fileName%>",
+  "name": "@quincarter/bottom-mobile-nav",
   "version": "0.0.1",
-  "description": "This is just an example <% if (componentType) { %> <%=componentType%> <% } else { %> component <% } %>",
+  "description": "This is just an example  component ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/<%=fileName%>"
+    "url": "https://gitlab.com/quincarter/component-library-starter/-/tree/main/packages/bottom-mobile-nav"
   },
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./<%=className%><%=componentTypeClass%>": {
-      "import": "./lib/src/<%=fileName%>.js",
-      "require": "./lib/src/<%=fileName%>.js",
-      "types": "./lib/src/<%=fileName%>.d.ts"
+    "./BottomMobileNavComponent": {
+      "import": "./lib/src/bottom-mobile-nav.js",
+      "require": "./lib/src/bottom-mobile-nav.js",
+      "types": "./lib/src/bottom-mobile-nav.d.ts"
     },
-    "./Core<%=className%><%=componentTypeClass%>": {
-      "import": "./lib/core/<%=fileName%>.core.js",
-      "require": "./lib/core/<%=fileName%>.core.js",
-      "types": "./lib/core/<%=fileName%>.core.d.ts"
+    "./CoreBottomMobileNavComponent": {
+      "import": "./lib/core/bottom-mobile-nav.core.js",
+      "require": "./lib/core/bottom-mobile-nav.core.js",
+      "types": "./lib/core/bottom-mobile-nav.core.d.ts"
     }
   },
   "typesVersions": {
@@ -26,11 +26,11 @@
       ".": [
         "./lib/index.d.ts"
       ],
-      "./<%=className%><%=componentTypeClass%>": [
-        "./lib/src/<%=fileName%>.d.ts"
+      "./BottomMobileNavComponent": [
+        "./lib/src/bottom-mobile-nav.d.ts"
       ],
-      "./Core<%=className%><%=componentTypeClass%>": [
-        "./lib/core/<%=fileName%>.core.d.ts"
+      "./CoreBottomMobileNavComponent": [
+        "./lib/core/bottom-mobile-nav.core.d.ts"
       ]
     }
   },
@@ -41,7 +41,6 @@
     "lib/index.*",
     "lib/tsconfig.tsbuildinfo"
   ],
-  "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873"
   },

@@ -14,9 +14,7 @@ module.exports = {
     options: {},
   },
 
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
 };
 
 function getAbsolutePath(value) {

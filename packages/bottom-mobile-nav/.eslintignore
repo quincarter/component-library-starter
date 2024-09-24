@@ -31,6 +31,4 @@ packages/**/coverage
 
 storybook-static
 custom-elements.json
-
-/.nx/cache
-/.nx/workspace-data
+package.json
