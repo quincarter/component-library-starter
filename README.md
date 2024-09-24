@@ -6,9 +6,9 @@
 If you are someone looking to build out some kind of component library with Lit components, this should help you get started. A lot of the setup work has been done for you here, but you can choose to use this, or modify it as needed. I tried to follow similar patterns I have seen across multiple component libraries when I put this together.
 
 ### What's included
-- Lit :lit: for authoring components (of course)
+- Lit for authoring components
 - Storybook for prototyping/testing/sandboxing your components
-- :typescript: is key here, But ships JS and TS assets when compiled with `tsc`. 
+- TypeScript is key here, But ships JS and TS assets when compiled with `tsc`. 
 - Web Test Runner for unit testing
 - Nx - if you have never used Nx before, it is a Monorepo management tool.
 - Changesets for publishing and managing versioning of nested packages in a monorepo
