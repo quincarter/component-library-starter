@@ -1,6 +1,6 @@
 {
-  "name": "quincarter",
-  "description": "Webcomponent quincarter following open-wc recommendations",
+  "name": "component-library-starter",
+  "description": "This is a starter project for enabling developers an easy way to create a Component Library with Lit Element components.",
   "license": "MIT",
   "author": "quincarter",
   "version": "0.0.1",

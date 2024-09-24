@@ -8183,6 +8183,72 @@ __metadata:
   languageName: node
   linkType: hard
 
+"component-library-starter@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "component-library-starter@workspace:."
+  dependencies:
+    "@angular-devkit/schematics": ^18.2.5
+    "@babel/core": ^7.25.2
+    "@babel/preset-env": ^7.25.4
+    "@babel/preset-react": ^7.24.7
+    "@babel/preset-typescript": ^7.24.7
+    "@changesets/cli": ^2.27.8
+    "@custom-elements-manifest/analyzer": ^0.10.3
+    "@nx/devkit": 19.8.0
+    "@nx/eslint": 19.8.0
+    "@nx/eslint-plugin": 19.8.0
+    "@nx/jest": 19.8.0
+    "@nx/js": 19.8.0
+    "@nx/plugin": 19.8.0
+    "@nx/workspace": 19.8.0
+    "@open-wc/eslint-config": ^12.0.3
+    "@open-wc/testing": latest
+    "@storybook/addon-actions": ^8.3.2
+    "@storybook/addon-cssresources": ^6.2.9
+    "@storybook/addon-essentials": ^8.3.2
+    "@storybook/addon-links": ^8.3.2
+    "@storybook/addon-mdx-gfm": ^8.3.2
+    "@storybook/web-components": ^8.3.2
+    "@storybook/web-components-vite": ^8.3.2
+    "@storybook/web-components-webpack5": ^8.3.2
+    "@swc-node/register": 1.10.9
+    "@swc/cli": 0.4.0
+    "@swc/core": 1.7.26
+    "@swc/helpers": 0.5.13
+    "@types/jest": 29.5.13
+    "@types/node": 22.6.1
+    "@typescript-eslint/eslint-plugin": 8.7.0
+    "@typescript-eslint/parser": 8.7.0
+    "@web/dev-server": ^0.4.6
+    "@web/dev-server-storybook": ^2.0.3
+    "@web/test-runner": ^0.19.0
+    babel-loader: ^9.2.1
+    babel-plugin-template-html-minifier: ^4.1.0
+    concurrently: ^9.0.1
+    eslint: 9.11.1
+    eslint-config-prettier: 9.1.0
+    eslint-plugin-storybook: ^0.8.0
+    husky: ^9.1.6
+    jest: 29.7.0
+    jest-environment-jsdom: 29.7.0
+    lint-staged: ^15.2.10
+    lit: ^3.2.0
+    nx: 19.8.0
+    prettier: ^3.3.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    rimraf: ^6.0.1
+    storybook: ^8.3.2
+    storybook-readme: ^5.0.9
+    ts-jest: 29.2.5
+    ts-node: 10.9.2
+    tslib: ^2.7.0
+    typescript: 5.6.2
+    vite: ^5.4.7
+    web-component-analyzer: ^2.0.0
+  languageName: unknown
+  linkType: soft
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -16313,72 +16379,6 @@ __metadata:
   checksum: a516faa25574be7947969883e6068dbe4aa19e8ef8e8e0fd96cddd6d36485e9106d85c0041a27153286b0770b381328f4072aa40d3b18a19f5f7d2b78b94b5ed
   languageName: node
   linkType: hard
-
-"quincarter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "quincarter@workspace:."
-  dependencies:
-    "@angular-devkit/schematics": ^18.2.5
-    "@babel/core": ^7.25.2
-    "@babel/preset-env": ^7.25.4
-    "@babel/preset-react": ^7.24.7
-    "@babel/preset-typescript": ^7.24.7
-    "@changesets/cli": ^2.27.8
-    "@custom-elements-manifest/analyzer": ^0.10.3
-    "@nx/devkit": 19.8.0
-    "@nx/eslint": 19.8.0
-    "@nx/eslint-plugin": 19.8.0
-    "@nx/jest": 19.8.0
-    "@nx/js": 19.8.0
-    "@nx/plugin": 19.8.0
-    "@nx/workspace": 19.8.0
-    "@open-wc/eslint-config": ^12.0.3
-    "@open-wc/testing": latest
-    "@storybook/addon-actions": ^8.3.2
-    "@storybook/addon-cssresources": ^6.2.9
-    "@storybook/addon-essentials": ^8.3.2
-    "@storybook/addon-links": ^8.3.2
-    "@storybook/addon-mdx-gfm": ^8.3.2
-    "@storybook/web-components": ^8.3.2
-    "@storybook/web-components-vite": ^8.3.2
-    "@storybook/web-components-webpack5": ^8.3.2
-    "@swc-node/register": 1.10.9
-    "@swc/cli": 0.4.0
-    "@swc/core": 1.7.26
-    "@swc/helpers": 0.5.13
-    "@types/jest": 29.5.13
-    "@types/node": 22.6.1
-    "@typescript-eslint/eslint-plugin": 8.7.0
-    "@typescript-eslint/parser": 8.7.0
-    "@web/dev-server": ^0.4.6
-    "@web/dev-server-storybook": ^2.0.3
-    "@web/test-runner": ^0.19.0
-    babel-loader: ^9.2.1
-    babel-plugin-template-html-minifier: ^4.1.0
-    concurrently: ^9.0.1
-    eslint: 9.11.1
-    eslint-config-prettier: 9.1.0
-    eslint-plugin-storybook: ^0.8.0
-    husky: ^9.1.6
-    jest: 29.7.0
-    jest-environment-jsdom: 29.7.0
-    lint-staged: ^15.2.10
-    lit: ^3.2.0
-    nx: 19.8.0
-    prettier: ^3.3.3
-    react: ^18.3.1
-    react-dom: ^18.3.1
-    rimraf: ^6.0.1
-    storybook: ^8.3.2
-    storybook-readme: ^5.0.9
-    ts-jest: 29.2.5
-    ts-node: 10.9.2
-    tslib: ^2.7.0
-    typescript: 5.6.2
-    vite: ^5.4.7
-    web-component-analyzer: ^2.0.0
-  languageName: unknown
-  linkType: soft
 
 "randombytes@npm:^2.1.0":
   version: 2.1.0
