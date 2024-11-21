@@ -51,10 +51,10 @@
     "test": "tsc && web-test-runner --coverage",
     "tsc:watch": "tsc --watch --preserveWatchOutput",
     "lint": "eslint **/*.ts **/*.json **/*.md *.md *.mjs && prettier \"**/*.ts\" --check --ignore-path .eslintignore",
-    "lint:fix": "eslint **/*.ts **/*.json **/*.md *.md *.mjs && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
+    "lint:fix": "eslint **/*.ts **/*.json **/*.md *.md *.mjs --fix && prettier \"**/*.ts\" --fix --ignore-path .eslintignore",
     "format": "eslint  **/*.ts **/*.json **/*.md *.md *.mjs && prettier \"**/*.ts\" --write --ignore-path .eslintignore"
   },
   "dependencies": {
-    "lit": "2.x"
+    "lit": "2.7.x || 3.x.x"
   }
 }

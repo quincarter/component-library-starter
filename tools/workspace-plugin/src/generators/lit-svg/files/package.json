@@ -44,6 +44,6 @@
     "format": "eslint --ext .js,.html --fix --ignore-path .eslintignore && prettier \"**/*.ts\" --write --ignore-path .eslintignore"
   },
   "dependencies": {
-    "lit": "2.x"
+    "lit": "2.7.x || 3.x.x"
   }
 }
