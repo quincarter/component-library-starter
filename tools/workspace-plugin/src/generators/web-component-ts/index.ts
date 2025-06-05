@@ -30,7 +30,7 @@ export default async function (tree: Tree, schema: WebComponentGenerator) {
     );
     await formatFiles(tree);
     return () => {
-      installPackagesTask(tree);
+      installPackagesTask(tree, true);
     };
   }
 }
