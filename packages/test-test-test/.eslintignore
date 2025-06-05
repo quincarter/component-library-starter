@@ -1,3 +1,5 @@
+tools/**
+
 ## editors
 /.idea
 /.vscode
@@ -27,14 +29,6 @@ packages/**/lib
 packages/**/coverage
 /lib/
 
-# Verdaccio
-.verdaccio
-
-# nx
-.nx
-
 storybook-static
 custom-elements.json
-.yarn/cache
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
+package.json
