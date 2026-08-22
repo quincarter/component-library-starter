@@ -1,3 +1,4 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
 import { createRequire } from 'node:module';
 import { StorybookConfig } from '@storybook/web-components-vite';
 import { dirname, join } from 'path';
@@ -6,7 +7,10 @@ const require = createRequire(import.meta.url);
 
 const config: StorybookConfig = {
   stories: ['../packages/**/stories/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: [getAbsolutePath('@storybook/addon-docs')],
+  addons: [
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-mcp'),
+  ],
 
   framework: {
     name: getAbsolutePath('@storybook/web-components-vite'),

@@ -154,25 +154,27 @@ export class BottomMobileNavComponent
 
   render(): HTMLTemplateResult {
     return html`
-      ${this.navItems.length > 0
-        ? html`<nav class="bottom-nav">
-            ${this.navItems.map(
-              (navItem: NavItem) => html`
-                <a
-                  href="${navItem.path}"
-                  class="bottom-nav-item ${classMap({
-                    active: window.location.pathname.includes(navItem.path),
-                  })}"
-                >
-                  <div class="bottom-nav-link">
-                    <i class="material-icons">${navItem.icon || ''}</i>
-                    <span>${navItem.name}</span>
-                  </div>
-                </a>
-              `,
-            )}
-          </nav>`
-        : nothing}
+      ${
+        this.navItems.length > 0
+          ? html`<nav class="bottom-nav">
+              ${this.navItems.map(
+                (navItem: NavItem) => html`
+                  <a
+                    href="${navItem.path}"
+                    class="bottom-nav-item ${classMap({
+                      active: window.location.pathname.includes(navItem.path),
+                    })}"
+                  >
+                    <div class="bottom-nav-link">
+                      <i class="material-icons">${navItem.icon || ''}</i>
+                      <span>${navItem.name}</span>
+                    </div>
+                  </a>
+                `,
+              )}
+            </nav>`
+          : nothing
+      }
     `;
   }
 }

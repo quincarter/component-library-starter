@@ -173,13 +173,15 @@ export class NotificationBannerComponent
 
   render(): HTMLTemplateResult {
     return html`
-      ${this.notificationState === 'opened'
-        ? html`<div class="banner">
-            <i class="close" @click="${this.dismissNotification}"></i>
-            <p class="title">${this.bannerTitle}</p>
-            <p class="description">${this.bannerDescription}</p>
-          </div>`
-        : html``}
+      ${
+        this.notificationState === 'opened'
+          ? html`<div class="banner">
+              <i class="close" @click="${this.dismissNotification}"></i>
+              <p class="title">${this.bannerTitle}</p>
+              <p class="description">${this.bannerDescription}</p>
+            </div>`
+          : html``
+      }
     `;
   }
 }

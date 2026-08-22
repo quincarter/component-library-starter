@@ -12,7 +12,7 @@ const preview: Preview = {
       },
     },
     viewport: {
-      viewports: {
+      options: {
         mobile: {
           name: 'Mobile',
           styles: {
@@ -35,7 +35,13 @@ const preview: Preview = {
           },
         },
       },
-      defaultViewport: 'tablet',
+    },
+  },
+
+  initialGlobals: {
+    viewport: {
+      value: 'tablet',
+      isRotated: false,
     },
   },
 };

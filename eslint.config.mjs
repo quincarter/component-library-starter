@@ -34,7 +34,6 @@ export default [
         files: ['*.ts', '*.tsx'],
         extends: ['plugin:@nx/typescript'],
         rules: {
-          '@typescript-eslint/no-extra-semi': 'error',
           'no-extra-semi': 'off',
         },
       },
@@ -42,7 +41,6 @@ export default [
         files: ['*.js', '*.jsx'],
         extends: ['plugin:@nx/javascript'],
         rules: {
-          '@typescript-eslint/no-extra-semi': 'error',
           'no-extra-semi': 'off',
         },
       },
