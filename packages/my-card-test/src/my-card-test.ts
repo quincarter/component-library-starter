@@ -97,11 +97,13 @@ export class MyCardTestCard extends LitElement implements IMyCardTestCard {
   render(): HTMLTemplateResult {
     return html`
       <div class="card">
-        ${this.myCardTestTitle
-          ? html` <div class="card-title">
-              <h1 class="my-card-test-test-color">${this.myCardTestTitle}</h1>
-            </div>`
-          : ''}
+        ${
+          this.myCardTestTitle
+            ? html` <div class="card-title">
+                <h1 class="my-card-test-test-color">${this.myCardTestTitle}</h1>
+              </div>`
+            : ''
+        }
         <div class="card-body">
           <slot name="card-slot"></slot>
         </div>

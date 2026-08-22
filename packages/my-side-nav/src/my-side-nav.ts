@@ -148,30 +148,34 @@ export class MySideNavComponent
           <a href="${navItem.link}">${navItem.name}</a
           ><span class="icon"><i class="fa ${navItem.icon}"></i></span>
 
-          ${navItem.children?.length
-            ? html`
-                <label
-                  title="toggle menu"
-                  for="id-${navItem.name.replace(/\s/g, '')}"
-                >
-                  <span class="downarrow"
-                    ><i class="fa fa-caret-down"></i
-                  ></span>
-                </label>
-                <input
-                  type="checkbox"
-                  class="sub-menu-checkbox"
-                  id="id-${navItem.name.replace(/\s/g, '')}"
-                />
+          ${
+            navItem.children?.length
+              ? html`
+                  <label
+                    title="toggle menu"
+                    for="id-${navItem.name.replace(/\s/g, '')}"
+                  >
+                    <span class="downarrow"
+                      ><i class="fa fa-caret-down"></i
+                    ></span>
+                  </label>
+                  <input
+                    type="checkbox"
+                    class="sub-menu-checkbox"
+                    id="id-${navItem.name.replace(/\s/g, '')}"
+                  />
 
-                <ul class="sub-menu-dropdown">
-                  ${navItem?.children?.map(
-                    child =>
-                      html`<li><a href="${child.link}">${child.name}</a></li>`,
-                  )}
-                </ul>
-              `
-            : html``}
+                  <ul class="sub-menu-dropdown">
+                    ${navItem?.children?.map(
+                      child =>
+                        html`<li>
+                          <a href="${child.link}">${child.name}</a>
+                        </li>`,
+                    )}
+                  </ul>
+                `
+              : html``
+          }
         </li>
       `,
     );
