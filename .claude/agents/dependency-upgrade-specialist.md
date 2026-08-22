@@ -8,12 +8,12 @@ You handle dependency upgrades in this Nx + Storybook + Lit monorepo. This repo 
 
 ## Before bumping anything: check peer compatibility
 
-`npm view <pkg>@latest peerDependencies --json` on every package you're about to bump, and cross-check the *other* tools that depend on it. Two traps already found in this repo that will recur as time passes:
+`npm view <pkg>@latest peerDependencies --json` on every package you're about to bump, and cross-check the _other_ tools that depend on it. Two traps already found in this repo that will recur as time passes:
 
 - **TypeScript**: npm's `latest` tag can point to a major generation (the native/Go-ported compiler, versioned 7.x) that most of the ecosystem doesn't support yet — `@typescript-eslint` and `ts-jest` both cap their `typescript` peer range below it. Check `@typescript-eslint/parser@latest` and `ts-jest@latest` peerDependencies before bumping TypeScript past whatever they currently allow. As of the last upgrade, TypeScript was pinned to `6.0.3` for exactly this reason — don't move it without re-verifying those two peer ranges first.
 - **Babel**: same shape of trap — `ts-jest`'s peer range can exclude the next Babel major. Check `ts-jest@latest peerDependencies` before bumping `@babel/core` past whatever it allows.
 
-This class of problem isn't limited to those two — any time an upgrade target is a fresh major release, check what *depends on* it (not just what it depends on) before committing to the bump.
+This class of problem isn't limited to those two — any time an upgrade target is a fresh major release, check what _depends on_ it (not just what it depends on) before committing to the bump.
 
 ## Workflow
 

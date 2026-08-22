@@ -116,7 +116,7 @@ A changeset that major bumps `@changesets/cli` would look like this:
 
 ```md
 ---
-"@changesets/cli": major
+'@changesets/cli': major
 ---
 
 A description of the major changes.

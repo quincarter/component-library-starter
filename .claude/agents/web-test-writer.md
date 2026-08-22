@@ -10,7 +10,7 @@ You write and fix tests for Lit components in this repo, using `@open-wc/testing
 ## Conventions
 
 - One spec file per component: `packages/<name>/test/<name>.spec.ts`.
-- Use `fixture()` from `@open-wc/testing` to render the component (`html\`<my-el></my-el>\``) and `expect()` (chai-based) for assertions — this is not Jest, don't reach for `jest.fn()`/`jest.mock` in these specs.
+- Use `fixture()` from `@open-wc/testing` to render the component (`html\`<my-el></my-el>\``) and `expect()`(chai-based) for assertions — this is not Jest, don't reach for`jest.fn()`/`jest.mock` in these specs.
 - The package's `test` script runs `tsc && web-test-runner --coverage` — a spec must also type-check cleanly against the package's `tsconfig.json`, not just pass at runtime.
 - Assert against the component's public interface (`core/<Name>.interface.ts`) and documented `@attr`/`@property` behavior, not internal implementation details.
 
