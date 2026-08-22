@@ -23,7 +23,10 @@
     "incremental": true,
     "paths": {
       "workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
-    }
+    },
+    "noUncheckedSideEffectImports": false,
+    "types": ["*"],
+    "ignoreDeprecations": "6.0"
   },
   "exclude": ["node_modules", "tmp", "tools", ".history"]
 }
